@@ -156,12 +156,12 @@
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">
 							2.2 Conversar
-						<?=matriz_detalhe(2,2,'Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizadas 	através da linguagem oral e ou de sinais')?>
+							<?=matriz_detalhe(2,2,'Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizadas através da linguagem oral e ou de sinais')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,1,2)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,2,2)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,1,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,2,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,2,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,2,3)?></div>
@@ -173,14 +173,14 @@
 			<div class="linha_matriz[2]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">2.3 Conversar
-						<?=matriz_detalhe(2,3,'
-						Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizada 	através da linguagem oral e ou de sinais')?>
+						<div class="texto_matriz align-items-start">
+							2.3 Conversar
+							<?=matriz_detalhe(2,3,'Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizada através da linguagem oral e ou de sinais')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,1,3)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,2,3)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,1,3,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,2,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,3,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,3,3)?></div>
@@ -192,14 +192,14 @@
 			<div class="linha_matriz[2]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">2.4 Discutir
-						<?=matriz_detalhe(2,4,'
-						Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizada 	através da linguagem oral e ou de sinais')?>
+						<div class="texto_matriz align-items-start">
+							2.4 Discutir
+							<?=matriz_detalhe(2,4,'Iniciar, manter e finalizar uma troca de pensamentos e idéias, realizada através da linguagem oral e ou de sinais')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,1,4)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(2,2,4)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(2,2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,4,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(2,4,3)?></div>
@@ -264,14 +264,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.2 Alcançar, transportar e mover objetos
-						<?=matriz_detalhe(3,2,'
-						Transportar e mover objeto de posição e alcançar acima da cabeça, à frente, 	ao lado e abaixo')?>
+						<div class="texto_matriz align-items-start">
+							3.2 Alcançar, transportar e mover objetos
+							<?=matriz_detalhe(3,2,'Transportar e mover objeto de posição e alcançar acima da cabeça, à frente, ao lado e abaixo')?>
 						</div>
 					</div>
-	,1			</div>,2
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,2)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,2)?></div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,2,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,2,3)?></div>
@@ -283,14 +283,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.3 Movimentos finos da mão
-						<?=matriz_detalhe(3,3,'
-						Manusear objetos, manipulá-los e soltá-los utilizando as mãos, dedos e polega'	)?>
+						<div class="texto_matriz align-items-start">
+							3.3 Movimentos finos da mão
+							<?=matriz_detalhe(3,3,'Manusear objetos, manipulá-los e soltá-los utilizando as mãos, dedos e polega')?>
 						</div>
 					</div>
-	,1			</div>,2
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,3)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,3)?></div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,3,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,3,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,3,3)?></div>
@@ -302,14 +302,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.4 Deslocar se dentro de casa
-						<?=matriz_detalhe(3,4,'
-						Andar ou deslocar-se dentro da própria casa, em um ambiente, incluindo áreas 	anexas quando aplicável')?>
+						<div class="texto_matriz align-items-start">
+							3.4 Deslocar se dentro de casa
+							<?=matriz_detalhe(3,4,'Andar ou deslocar-se dentro da própria casa, em um ambiente, incluindo áreas anexas quando aplicável')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,4)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,4)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,4,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,4,3)?></div>
@@ -321,14 +321,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.5 Deslocar-se dentro de edifícios que não a própria casa
-						<?=matriz_detalhe(3,5,'
-						Andar ou deslocar-se dentro de edifícios que não a própria residência, 	incluindo áreas anexas quando aplicável')?>
+						<div class="texto_matriz align-items-start">
+							3.5 Deslocar-se dentro de edifícios que não a própria casa
+							<?=matriz_detalhe(3,5,'Andar ou deslocar-se dentro de edifícios que não a própria residência, incluindo áreas anexas quando aplicável')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,5)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,5)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,5,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,5,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,5,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,5,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,5,3)?></div>
@@ -340,14 +340,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.6 Deslocar-se fora de sua casa e de outros edifícios
-						<?=matriz_detalhe(3,6,'
-						Andar ou deslocar-se perto ou longe da própria casa e de outros edifícios, 	sem utilização de transporte público ou privado')?>
+						<div class="texto_matriz align-items-start">
+							3.6 Deslocar-se fora de sua casa e de outros edifícios
+							<?=matriz_detalhe(3,6,'Andar ou deslocar-se perto ou longe da própria casa e de outros edifícios, sem utilização de transporte público ou privado')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,6)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,6)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,6,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,6,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,6,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,6,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,6,3)?></div>
@@ -359,14 +359,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.7 Utilizar transporte coletivo
-						<?=matriz_detalhe(3,7,'
-						Utilizar transporte coletivo para se deslocar, como passageiro, por meio 	terrestre, aqüaviário ou aéreo')?>
+						<div class="texto_matriz align-items-start">
+							3.7 Utilizar transporte coletivo
+							<?=matriz_detalhe(3,7,'Utilizar transporte coletivo para se deslocar, como passageiro, por meio terrestre, aqüaviário ou aéreo')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,7)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,7)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,7,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,7,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,7,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,7,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,7,3)?></div>
@@ -378,14 +378,14 @@
 			<div class="linha_matriz[3]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">3.8 Utilizar transporte individual como passageiro
-						<?=matriz_detalhe(3,8,'
-						Utilizar transporte para se deslocar, como passageiro, por meio terrestre, 	aqüaviário ou aéreo')?>
+						<div class="texto_matriz align-items-start">
+							3.8 Utilizar transporte individual como passageiro
+							<?=matriz_detalhe(3,8,'Utilizar transporte para se deslocar, como passageiro, por meio terrestre, aqüaviário ou aéreo')?>
 						</div>
 					</div>
-	,1			</div>,2
-				<div class="col-xs-1 col-sm-1"><?=inss(3,1,8)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(3,2,8)?></div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,1,8,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(3,2,8,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,8,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,8,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(3,8,3)?></div>
@@ -412,14 +412,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.1 Lavar-se
-						<?=matriz_detalhe(4,1,'
-						Tomar banho e limpar o corpo de forma completa incluindo lavar e secar todas 	as partes do corpo da forma habitual')?>
+						<div class="texto_matriz align-items-start">
+							4.1 Lavar-se
+							<?=matriz_detalhe(4,1,'Tomar banho e limpar o corpo de forma completa incluindo lavar e secar todas as partes do corpo da forma habitual')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,1)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,1,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,1,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,1,3)?></div>
@@ -450,14 +450,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.3 Regulação da micção
-						<?=matriz_detalhe(4,3,'
-						Reconhecer a necessidade de urinar, escolher a forma e o local apropriado, 	manipular a roupa, urinar e secar-se')?>
+						<div class="texto_matriz align-items-start">
+							4.3 Regulação da micção
+							<?=matriz_detalhe(4,3,'Reconhecer a necessidade de urinar, escolher a forma e o local apropriado, manipular a roupa, urinar e secar-se')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,3)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,3)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,3,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,3,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,3,3)?></div>
@@ -469,14 +469,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.4 Regulação da defecação
-						<?=matriz_detalhe(4,4,'
-						Reconhecer a necessidade de evacuar, escolher a forma e o local apropriado, 	manipular a roupa, evacuar e limpar-se')?>
+						<div class="texto_matriz align-items-start">
+							4.4 Regulação da defecação
+							<?=matriz_detalhe(4,4,'Reconhecer a necessidade de evacuar, escolher a forma e o local apropriado, manipular a roupa, evacuar e limpar-se')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,4)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,4)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,4,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,4,3)?></div>
@@ -507,14 +507,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.6 Comer
-						<?=matriz_detalhe(4,6,'
-						Levar à boca e comer alimento preparado e servido de forma de forma habitual')	?>
+						<div class="texto_matriz align-items-start">
+							4.6 Comer
+							<?=matriz_detalhe(4,6,'Levar à boca e comer alimento preparado e servido de forma de forma habitual')	?>
 						</div>
 					</div>
-	,1			</div>,2
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,6)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,6)?></div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,6,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,6,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,6,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,6,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,6,3)?></div>
@@ -526,14 +526,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.7 Beber
-						<?=matriz_detalhe(4,7,'
-						Levar à boca e beber bebida preparada e servida de forma de forma habitual e 	com deglutição segura')?>
+						<div class="texto_matriz align-items-start">
+							4.7 Beber
+							<?=matriz_detalhe(4,7,'Levar à boca e beber bebida preparada e servida de forma de forma habitual e com deglutição segura')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,7)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,7)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,7,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,7,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,7,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,7,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,7,3)?></div>
@@ -545,14 +545,14 @@
 			<div class="linha_matriz[4]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">4.8 Capacidade de identificar agravos à saúde
-						<?=matriz_detalhe(4,8,'
-						Identificar sinais e sintomas que possam potencialmente comprometer a saúde e 	a integridade física, reconhecer abusos e violência')?>
+						<div class="texto_matriz align-items-start">
+							4.8 Capacidade de identificar agravos à saúde
+							<?=matriz_detalhe(4,8,'Identificar sinais e sintomas que possam potencialmente comprometer a saúde e a integridade física, reconhecer abusos e violência')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,1,8)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(4,2,8)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,1,8,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(4,2,8,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,8,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,8,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(4,8,3)?></div>
@@ -598,14 +598,14 @@
 			<div class="linha_matriz[5]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">5.2 Cozinhar
-						<?=matriz_detalhe(5,2,'
-						Planejar, organizar e executar o preparo de refeições que exijam varios 	ingredientes ou utensílios, ou uma sequência de ações')?>
+						<div class="texto_matriz align-items-start">
+							5.2 Cozinhar
+							<?=matriz_detalhe(5,2,'Planejar, organizar e executar o preparo de refeições que exijam varios ingredientes ou utensílios, ou uma sequência de ações')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(5,1,2)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(5,2,2)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(5,1,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(5,2,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,2,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,2,3)?></div>
@@ -636,14 +636,14 @@
 			<div class="linha_matriz[5]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">5.4 Manutenção e uso apropriado de objetos pessoais e utensílios da ca
-						<?=matriz_detalhe(5,4,'
-						Utilizar, guardar e conservar objetos pessoais, cuidar da casa e dos 	utensílios domésticos')?>
+						<div class="texto_matriz align-items-start">
+							5.4 Manutenção e uso apropriado de objetos pessoais e utensílios da ca
+							<?=matriz_detalhe(5,4,'Utilizar, guardar e conservar objetos pessoais, cuidar da casa e dos utensílios domésticos')?>
 						sa</div>
 					</div>
-	,1			</div>,2
-				<div class="col-xs-1 col-sm-1"><?=inss(5,1,4)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(5,2,4)?></div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(5,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(5,2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,4,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(5,4,3)?></div>
@@ -689,14 +689,14 @@
 			<div class="linha_matriz[6]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">6.1 Educação
-						<?=matriz_detalhe(6,1,'
-						Adquirir habilidades e conhecimentos educacionais, dentro e fora da escola, 	considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
+						<div class="texto_matriz align-items-start">
+							6.1 Educação
+							<?=matriz_detalhe(6,1,'Adquirir habilidades e conhecimentos educacionais, dentro e fora da escola, considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(6,1,1)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(6,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,1,1,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,2,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(6,1,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(6,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(6,1,3)?></div>
@@ -704,10 +704,86 @@
 				<div class="col-xs-1 text-center"><?=ba(6,1,5)?></div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="linha_matriz[6]">
+				<div class="col-sm-5 col-xs-5">
+					<div class="linha_matriz">
+						<div class="texto_matriz align-items-start">
+							6.2 Qualificação Profissional
+							<?=matriz_detalhe(6,2,'Adquirir habilidades e conhecimentos específicos para atividade profissional, considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,1,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,2,2,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,2,1)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,2,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,2,3)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,2,4)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,2,5)?></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="linha_matriz[6]">
+				<div class="col-sm-5 col-xs-5">
+					<div class="linha_matriz">
+						<div class="texto_matriz align-items-start">
+							6.3 Educação
+							<?=matriz_detalhe(6,3,'Adquirir habilidades e conhecimentos educacionais, dentro e fora da escola, considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,1,3,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,2,3,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,3,1)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,3,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,3,3)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,3,4)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,3,5)?></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="linha_matriz[6]">
+				<div class="col-sm-5 col-xs-5">
+					<div class="linha_matriz">
+						<div class="texto_matriz align-items-start">
+							6.4 Educação
+							<?=matriz_detalhe(6,4,'Adquirir habilidades e conhecimentos educacionais, dentro e fora da escola, considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,2,4,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,4,1)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,4,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,4,3)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,4,4)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,4,5)?></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="linha_matriz[6]">
+				<div class="col-sm-5 col-xs-5">
+					<div class="linha_matriz">
+						<div class="texto_matriz align-items-start">
+							6.5 Educação
+							<?=matriz_detalhe(6,5,'Adquirir habilidades e conhecimentos educacionais, dentro e fora da escola, considerando acessibilidade e disponibilidade de recursos educacionais adequados')?>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,1,5,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(6,2,5,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,5,1)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,5,2)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,5,3)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,5,4)?></div>
+				<div class="col-xs-1 text-center"><?=ba(6,5,5)?></div>
+			</div>
+		</div>
 		<div class="row botton_margin">
 			<div class="col-xs-5">
 				<div class="dominio">
-					<b>7. Domínio Socializaçã o e Vida Comunitária</b>
+					<b>7. Domínio Socialização e Vida Comunitária</b>
 					<?=matriz_updown(7)?>
 					<span class="total_dominio float_right alert-success dominio-7">Total por domínio</span>
 				</div>
@@ -723,14 +799,14 @@
 			<div class="linha_matriz[7]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">7.1 Regular o comportamento nas interações
-						<?=matriz_detalhe(7,1,'
-						Controlar o próprio comportamento, emoções e impulsos, agressão verbal e 	física nas interações, de maneira contextual e socialmente apropriada')?>
+						<div class="texto_matriz align-items-start">
+							7.1 Regular o comportamento nas interações
+							<?=matriz_detalhe(7,1,'Controlar o próprio comportamento, emoções e impulsos, agressão verbal e física nas interações, de maneira contextual e socialmente apropriada')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,1,1)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,1,1,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,2,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,1,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,1,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,1,3)?></div>
@@ -742,14 +818,14 @@
 			<div class="linha_matriz[7]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">7.2 Interagir de acordo com as regras sociais
-						<?=matriz_detalhe(7,2,'
-						Agir independentemente nas interações sociais e adaptar-se às convenções 	sociais que regem o papel, posição ou status social das pessoas nas interações com os outros')?>
+						<div class="texto_matriz align-items-start">
+							7.2 Interagir de acordo com as regras sociais
+							<?=matriz_detalhe(7,2,'Agir independentemente nas interações sociais e adaptar-se às convenções sociais que regem o papel, posição ou status social das pessoas nas interações com os outros')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,1,2)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,2,2)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,1,2,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,2,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,2,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,2,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,2,3)?></div>
@@ -761,14 +837,14 @@
 			<div class="linha_matriz[7]">
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
-						<div class="texto_matriz align-items-start">7.3 Relacionamentos com estranhos
-						<?=matriz_detalhe(7,3,'
-						Estabelecer contatos e ligações temporários com estranhos para fins 	específicos como, quando aplicável')?>
+						<div class="texto_matriz align-items-start">
+							7.3 Relacionamentos com estranhos
+							<?=matriz_detalhe(7,3,'Estabelecer contatos e ligações temporários com estranhos para fins específicos como, quando aplicável')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,1,3)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,2,3)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,1,3,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,2,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,3,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,3,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,3,3)?></div>
@@ -781,13 +857,12 @@
 				<div class="col-sm-5 col-xs-5">
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">7.4 Relacionamentos familiares e com pessoas familiares
-						<?=matriz_detalhe(7,4,'
-						Criar e manter relações de parentesco com membros do núcleo familiar ou 	pessoas próximas. Participar da rotina familiar')?>
+						<?=matriz_detalhe(7,4,'Criar e manter relações de parentesco com membros do núcleo familiar ou pessoas próximas. Participar da rotina familiar')?>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,1,4)?></div>
-				<div class="col-xs-1 col-sm-1"><?=inss(7,2,4)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,1,4,1)?></div>
+				<div class="col-xs-1 col-sm-1"><?=inss(7,2,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,4,1)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,4,2)?></div>
 				<div class="col-xs-1 text-center"><?=ba(7,4,3)?></div>
