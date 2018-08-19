@@ -1,4 +1,4 @@
-<?php require_once("cabecalho.php"); ?>
+<?php require_once"cabecalho.php"; ?>
 
 <div class="container-fluid">
 	<h4>Legenda</h4>
