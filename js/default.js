@@ -2,6 +2,12 @@ $(document).ready(function(){
 	var avaliador_count=0;
 	var span_append;
 	var input_append;
+	
+	pont= new Array(
+		new Array(7),
+		new Array(7)
+	);
+
 
 	$(window).resize(function () {
 		window_size=$(window).width();
@@ -14,6 +20,13 @@ $(document).ready(function(){
 			console.log('window size: '+window_size);
 		}
 	});	
+
+	function pontuacao(box_col,valor){
+		box_col=box_col.split('.');
+		box=box_col[0];
+		col=box_col[1];
+		pont[--col][--box]=valor;
+	}
 
 	function snackbar($content) {
 		var x = document.getElementById("snackbar");
@@ -79,7 +92,7 @@ $(document).ready(function(){
 	$('.inss_select').change(function(){
 		var dominio=this.className.split(" ")[0];
 		dom_col=dominio.split('-')[1];
-		dom_box=dominio.split('-')[1].split('.')[0];
+		dom_box=dominio.split('-')[1].split('.');
 		i=0;
 		valida=true;
 		valor=0;
@@ -94,35 +107,15 @@ $(document).ready(function(){
 				i++;
 			});
 			valor=valor/i;
+
 			$('[id="dominio-'+dom_col+'"]').html(valor);
+			pontuacao(dom_col,valor);
 			$('[id="dominio-'+dom_col+'"]').css({
 				'-webkit-box-shadow': '0 0 5px 2px var(--default-blue)',
 				'-moz-box-shadow': '0 0 5px 2px var(--default-blue)',
 				'box-shadow': '0 0 5px 2px var(--default-blue)'
 			});
 		}
-	});
-
-	$('.coluna-1, .coluna-2').change(function(){
-		var coluna=this.className.split(" ")[1];
-		var col=this.className.split(" ")[1].split('-')[1];
-		i=0;
-		valida=false;
-		valor=0;
-		loga('[class^="'+coluna+'"]');
-		$('[class^="'+coluna+'"]').each(function(){
-			if (this.value=='null') {
-				valida=true;
-			}
-		});
-		loga(valida);
-		for (var j = 1; j <= 7; j++) {
-			$('[class^="inss_select-'+j+'.'+col+'"]').each(function(){
-				valor+=parseInt(this.value);
-				i++;
-			});
-		}
-		loga('[class^="inss_select-'+j+'.'+col+'"]');
 	});
 
 	$('#informante').change(function(){
