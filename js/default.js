@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var span_append;
 	var input_append;
 	
-	pont= new Array(
+	var pont= new Array(
 		new Array(7),
 		new Array(7)
 	);
@@ -21,11 +21,25 @@ $(document).ready(function(){
 		}
 	});	
 
+	function soma_total(){
+		for (var i = pont.length - 1; i >= 0; i--) {
+			parcial=pont[i];
+			for (var j = parcial.length - 1; j >= 0; j--) {
+				if (parcial[j]=="undefined") {
+					loga('['+i+']'+'['+j+']'+":undefined");
+				}else{
+					loga('['+i+']'+'['+j+']'+":"+parcial[j]);
+				}
+			}
+		}
+	}
+
 	function pontuacao(box_col,valor){
 		box_col=box_col.split('.');
 		box=box_col[0];
 		col=box_col[1];
 		pont[--col][--box]=valor;
+		soma_total();
 	}
 
 	function snackbar($content) {
