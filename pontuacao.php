@@ -41,4 +41,41 @@
 	</div>
 </div>
 
+<div class="container-fluid text-center">
+	<h4>Classificação</h4>
+</div>
+
+<div class="container">
+	<div class="list-group">
+		<div class="list-group-item">
+			<p>
+				<b>Deficiência Grave</b>
+			</p>
+			Quando a pontuação for menor ou igual a <b>5,739</b>.
+			<div class="criterio_text"></div>
+		</div>
+		<div class="list-group-item">
+			<p>
+				<b>Deficiência Moderada</b>
+			</p>
+			Quando a pontuação for maior ou igual <b>5,740</b> e menor ou igual a <b>7,584</b>.
+			<div class="criterio_text"></div>
+		</div>
+		<div class="list-group-item">
+			<p>
+				<b>Deficiência Leve</b>
+			</p>
+			Quando a pontuação total for maior ou igual a <b>6,355</b> e menor ou igual a <b>7,584</b>.
+			<div class="criterio_text"></div>
+		</div>
+		<div class="list-group-item">
+			<p>
+				<b>Pontuação Insuficiente para Concessão de Benefício</b>
+			</p>
+			Quando a pontuação for maior ou igual a <b>7,585</b>.
+			<div class="criterio_text"></div>
+		</div>
+	</div>
+</div>
+
 <?php require_once('rodape.php'); ?>
