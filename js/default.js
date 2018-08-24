@@ -4,10 +4,10 @@ $(document).ready(function(){
 	var input_append;
 	
 	var pont= new Array(
-		new Array(7),
-		new Array(7)
+		new Array(0,0,0,0,0,0,0),
+		new Array(0,0,0,0,0,0,0)
 	);
-
+	var total=new Array(0,0);
 
 	$(window).resize(function () {
 		window_size=$(window).width();
@@ -21,17 +21,36 @@ $(document).ready(function(){
 		}
 	});	
 
-	function soma_total(){
+	function varre_total(){
+		retorno=true;
 		for (var i = pont.length - 1; i >= 0; i--) {
-			parcial=pont[i];
-			for (var j = parcial.length - 1; j >= 0; j--) {
-				if (parcial[j]=="undefined") {
-					loga('['+i+']'+'['+j+']'+":undefined");
-				}else{
-					loga('['+i+']'+'['+j+']'+":"+parcial[j]);
+			for (var j = pont[i].length - 1; j >= 0; j--) {
+				if(pont[i][j]==0){
+					retorno=false;
 				}
 			}
 		}
+		return retorno;
+	}
+
+	function soma_total(){
+		verifica=true;
+		for (var i = pont.length - 1; i >= 0; i--) {
+			parcial=pont[i];
+			for (var j = parcial.length - 1; j >= 0; j--) {
+				if (parcial[j]==0) {
+					verifica=false;
+				}else{
+					total[i]=+parseInt(parcial[j]);
+				}
+			}
+		}
+		verifica=varre_total();
+		loga(verifica);
+		if (verifica) {
+			total[0]=(total[0]/7).toFixed(3);
+			total[1]=(total[1]/7).toFixed(3);
+		}	
 	}
 
 	function pontuacao(box_col,valor){
@@ -120,7 +139,7 @@ $(document).ready(function(){
 				valor+=parseInt(this.value);
 				i++;
 			});
-			valor=valor/i;
+			valor=(valor/i).toFixed(3);
 
 			$('[id="dominio-'+dom_col+'"]').html(valor);
 			pontuacao(dom_col,valor);
