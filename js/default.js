@@ -4,10 +4,29 @@ $(document).ready(function(){
 	var input_append;
 	
 	var pont= new Array(
-		new Array(0,0,0,0,0,0,0),
-		new Array(0,0,0,0,0,0,0)
+		new Array(
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0)
+		),
+		new Array(
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0),
+			parseFloat(0)
+		)
 	);
-	var total=new Array(0,0);
+	var total=new Array(
+			parseFloat(0),
+			parseFloat(0)
+		);
 
 	$(window).resize(function () {
 		window_size=$(window).width();
@@ -34,30 +53,36 @@ $(document).ready(function(){
 	}
 
 	function soma_total(){
-		verifica=true;
-		for (var i = pont.length - 1; i >= 0; i--) {
-			parcial=pont[i];
-			for (var j = parcial.length - 1; j >= 0; j--) {
-				if (parcial[j]==0) {
-					verifica=false;
-				}else{
-					total[i]=+parseInt(parcial[j]);
+		verifica=varre_total();
+		if (verifica) {
+			for (var i = pont.length - 1; i >= 0; i--) {
+			incremento=0;
+				parcial=pont[i];
+				for (var j = parcial.length - 1; j >= 0; j--) {
+					incremento=incremento+parseFloat(parcial[j]);
+					// total[i]=total[i]+incremento;
 				}
+				total[i]=incremento;
+				// loga('['+i+']['+j+']:'+total[i]);
+				loga(total);
 			}
 		}
-		verifica=varre_total();
 		loga(verifica);
 		if (verifica) {
-			total[0]=(total[0]/7).toFixed(3);
-			total[1]=(total[1]/7).toFixed(3);
+			total[0]=total[0]/7;
+			total[1]=total[1]/7;
+
+			$('#total_ss').html((total[0]).toFixed(3));
+			$('#total_mp').html((total[1]).toFixed(3));
 		}	
 	}
 
 	function pontuacao(box_col,valor){
 		box_col=box_col.split('.');
-		box=box_col[0];
-		col=box_col[1];
+		box=parseFloat(box_col[0]);
+		col=parseFloat(box_col[1]);
 		pont[--col][--box]=valor;
+		loga(pont);
 		soma_total();
 	}
 
@@ -136,7 +161,7 @@ $(document).ready(function(){
 		});
 		if (valida) {
 			$('[class^="'+dominio+'"]').each(function(){
-				valor+=parseInt(this.value);
+				valor+=parseFloat(this.value);
 				i++;
 			});
 			valor=(valor/i).toFixed(3);
