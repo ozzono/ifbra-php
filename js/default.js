@@ -103,13 +103,9 @@ $(document).ready(function(){
 		age = today_year - birth_year;
 
 		if ( today_month < (birth_month - 1))
-		{
-			age--;
-		}
+		{age--; }
 		if (((birth_month - 1) == today_month) && (today_day < birth_day))
-		{
-			age--;
-		}
+		{age--; }
 		$('#idade').val(age);
 	}
 
