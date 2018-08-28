@@ -43,7 +43,15 @@
 					<input type="text" placeholder="Nome" class="form-control" name="nome">
 				</div>
 			</div>
-			<div class="col-sm-5"> <!-- data de nascimento -->
+			<div class="col-sm-2"> <!-- rf -->
+				<div class="input-group form-group">
+					<span class="input-group-addon">
+						Matrícula:
+					</span>
+					<input type="text" placeholder="Matrícula" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-3"> <!-- data de nascimento -->
 				<div class="input-group date form-group-sm" data-provide="datepicker">
 					<span class="input-group-addon">Data de Nascimento</span>
 					<input type="date" class="form-control datepicker" id="datepicker2">
@@ -103,12 +111,10 @@
 					<input type="number" id="idade" disabled class="size_xs form-control">
 				</div>
 			</div>
-			<div class="col-sm-2"> <!-- rf -->
+			<div class="col-sm-5"> <!-- locatação -->
 				<div class="input-group form-group">
-					<span class="input-group-addon">
-						Matrícula:
-					</span>
-					<input type="text" placeholder="Matrícula" class="form-control">
+					<span class="input-group-addon">Lotação</span>
+					<input type="text" name="lotacao" class="form-control">
 				</div>
 			</div>
 			<div class="col-sm-2"> <!-- sexo -->
@@ -139,17 +145,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-2">
-				<div class="input-group form-group">
-					<span class="input-group-addon">CID</span>
-					<?=cid10()?>
-					<!-- <input class="form-control" type="text" name="cid"> -->
-				</div>
-			</div>
 			<div class="col-sm-5">
 				<div class="input-group form-group">
-					<span class="input-group-addon">Lotação</span>
-					<input type="text" name="lotacao" class="form-control">
+					<span class="input-group-addon">CID</span>
+					<?=cid10(0)?>
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-plus"></span>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-5">
