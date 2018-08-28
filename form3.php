@@ -67,7 +67,7 @@
 				<div class="dominio">
 					<b>1. Domínio Sensorial</b>
 					<?=matriz_updown(1)?>
-					<span class="total_dominio float_right alert-success dominio-1">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-1">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -121,7 +121,7 @@
 				<div class="dominio">
 					<b>2. Domínio de comunicação</b>
 					<?=matriz_updown(2)?>
-					<span class="total_dominio float_right alert-success dominio-2">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-2">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -231,7 +231,7 @@
 				<div class="dominio">
 					<b>3. Domínio Mobilidade</b>
 					<?=matriz_updown(3)?>
-					<span class="total_dominio float_right alert-success dominio-3">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-3">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -398,7 +398,7 @@
 				<div class="dominio">
 					<b>4. Domínio Cuidados Pessoais</b>
 					<?=matriz_updown(4)?>
-					<span class="total_dominio float_right alert-success dominio-4">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-4">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -565,7 +565,7 @@
 				<div class="dominio">
 					<b>5. Domínio Vida Doméstica</b>
 					<?=matriz_updown(5)?>
-					<span class="total_dominio float_right alert-success dominio-5">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-5">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -675,7 +675,7 @@
 				<div class="dominio">
 					<b>6. Domínio Educação</b>
 					<?=matriz_updown(6)?>
-					<span class="total_dominio float_right alert-success dominio-6">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-6">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
@@ -785,7 +785,7 @@
 				<div class="dominio">
 					<b>7. Domínio Socialização e Vida Comunitária</b>
 					<?=matriz_updown(7)?>
-					<span class="total_dominio float_right alert-success dominio-7">Total por domínio</span>
+					<span class="total_dominio float_right alert-success dominio-7">Total parcial</span>
 				</div>
 			</div>
 			<div class="col-xs-1">
