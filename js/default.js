@@ -60,10 +60,8 @@ $(document).ready(function(){
 				parcial=pont[i];
 				for (var j = parcial.length - 1; j >= 0; j--) {
 					incremento=incremento+parseFloat(parcial[j]);
-					// total[i]=total[i]+incremento;
 				}
 				total[i]=incremento;
-				// loga('['+i+']['+j+']:'+total[i]);
 				loga(total);
 			}
 		}

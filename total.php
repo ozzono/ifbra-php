@@ -13,10 +13,10 @@
 	<div class="row">
 		<div class="total_consolidado">
 			<div class="col-xs-6">
-				<span class="total_ss">x</span>
+				<span id="total_ss">x</span>
 			</div>
 			<div class="col-xs-6">
-				<span class="total_mp">x</span>
+				<span id="total_mp">x</span>
 			</div>
 		</div>
 	</div>

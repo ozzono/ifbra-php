@@ -137,7 +137,7 @@
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">
 							2.1 Comunicar-se
-							<?=matriz_detalhe(2,1,'Produção de mensagens')?>
+							<?=matriz_detalhe(2,1,'Compreender mensagens')?>
 						</div>
 					</div>
 				</div>

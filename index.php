@@ -20,10 +20,10 @@
 <?php require_once('total.php'); ?>
 
 <form action="">
-	<?php //require_once('form1.php'); ?>
-	<?php //require_once('form2.php'); ?>
+	<?php require_once('form1.php'); ?>
+	<?php require_once('form2.php'); ?>
 	<?php require_once('form3.php'); ?>
-	<?php //require_once('form4.php'); ?>
+	<?php require_once('form4.php'); ?>
 </form>
 
 <?php require_once("rodape.php"); ?>
