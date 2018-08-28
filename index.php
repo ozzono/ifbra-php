@@ -17,8 +17,6 @@
 	</a>
 </div>
 
-<?php require_once('total.php'); ?>
-
 <form action="">
 	<?php require_once('form1.php'); ?>
 	<?php //require_once('form2.php'); ?>
