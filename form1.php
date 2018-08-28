@@ -149,6 +149,7 @@
 				<div class="input-group form-group">
 					<span class="input-group-addon">CID</span>
 					<?=cid10(0)?>
+					<?=cid10(1)?>
 					<div class="input-group-addon">
 						<span class="glyphicon glyphicon-plus"></span>
 					</div>
