@@ -1,4 +1,18 @@
 <?php 
+function cid10(){
+	$json=file_get_contents('cid10.json');
+	$json=json_decode($json);
+	$retorno=
+		'<input class="form-control" list="cid10">'.
+		'<datalist id="cid10">'
+	;
+	foreach ($json as &$cidnum) {
+		$retorno.='<option value="'.$cidnum[0].'">'.$cidnum[1].'</option>'.
+	}
+	$retorno.='</datalist>';
+	return $retorno;
+}
+
 function checkbox($i,$j){
 	$retorno='<input type="checkbox" class="fuzzy_checkbox" name="fuzzy-['.$i.']['.$j.']" id="fuzzy-['.$i.']['.$j.']" value="sim">';
 	return $retorno;

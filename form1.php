@@ -142,7 +142,8 @@
 			<div class="col-sm-2">
 				<div class="input-group form-group">
 					<span class="input-group-addon">CID</span>
-					<input class="form-control" type="text" name="cid">
+					<?=cid10()?>
+					<!-- <input class="form-control" type="text" name="cid"> -->
 				</div>
 			</div>
 			<div class="col-sm-5">
