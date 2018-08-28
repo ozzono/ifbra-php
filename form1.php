@@ -43,7 +43,25 @@
 					<input type="text" placeholder="Nome" class="form-control" name="nome">
 				</div>
 			</div>
-			<div class="col-sm-2"> <!-- rf -->
+			<div class="col-sm-5"> <!-- locatação -->
+				<div class="input-group form-group">
+					<span class="input-group-addon">Lotação</span>
+					<input type="text" name="lotacao" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2"> <!-- sexo -->
+				<div class="input-group form-group">
+					<span class="input-group-addon">Sexo</span>
+					<select name="sexo" class="form-control">
+						<option value="0">&nbsp;</option>
+						<option value="F">F</option>
+						<option value="M">M</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4"> <!-- rf -->
 				<div class="input-group form-group">
 					<span class="input-group-addon">
 						Matrícula:
@@ -51,7 +69,13 @@
 					<input type="text" placeholder="Matrícula" class="form-control">
 				</div>
 			</div>
-			<div class="col-sm-3"> <!-- data de nascimento -->
+			<div class="col-sm-2"> <!-- idade -->
+				<div class="input-group form-group">
+					<span class="input-group-addon">Idade</span>
+					<input type="number" id="idade" disabled class="size_xs form-control">
+				</div>
+			</div>
+			<div class="col-sm-4"> <!-- data de nascimento -->
 				<div class="input-group date form-group-sm" data-provide="datepicker">
 					<span class="input-group-addon">Data de Nascimento</span>
 					<input type="date" class="form-control datepicker" id="datepicker2">
@@ -63,7 +87,6 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-4"> <!-- tipo de deficiência -->
-				
 				<div class="input-group form-group">
 					<span class="input-group-addon">
 						<b>Tipo de Deficiência</b>
@@ -105,31 +128,11 @@
 					</div>							
 				</div>
 			</div>
-			<div class="col-sm-2"> <!-- idade -->
-				<div class="input-group form-group">
-					<span class="input-group-addon">Idade</span>
-					<input type="number" id="idade" disabled class="size_xs form-control">
-				</div>
-			</div>
-			<div class="col-sm-5"> <!-- locatação -->
-				<div class="input-group form-group">
-					<span class="input-group-addon">Lotação</span>
-					<input type="text" name="lotacao" class="form-control">
-				</div>
-			</div>
-			<div class="col-sm-2"> <!-- sexo -->
-				<div class="input-group form-group">
-					<span class="input-group-addon">Sexo</span>
-					<select name="sexo" class="form-control">
-						<option value="F">F</option>
-						<option value="M">M</option>
-					</select>
-				</div>
-			</div>
 			<div class="col-sm-2"> <!-- etnia -->
 				<div class="input-group form-group">
 					<span class="input-group-addon">Etnia</span>
 					<select class="size_md form-control" name="etnia">
+						<option value="0">&nbsp;</option>
 						<option value="branca">Branca</option>
 						<option value="negra">Negra</option>
 						<option value="amarela">Amarela</option>
@@ -139,28 +142,34 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="row">
 			<div class="col-sm-12">
 				<b>Diagnóstico Médico</b>
 			</div>
 		</div>
+
 		<div class="row">
-			<div class="col-sm-5">
-				<div class="input-group form-group">
+			<div class="col-sm-2">
+				<div class="input-group">
 					<span class="input-group-addon">CID</span>
 					<?=cid10(0)?>
-					<?=cid10(1)?>
-					<div class="input-group-addon">
-						<span class="glyphicon glyphicon-plus"></span>
-					</div>
 				</div>
 			</div>
-			<div class="col-sm-5">
+			<div class="col-sm-8">
 				<div class="input-group form-group">
 					<span class="input-group-addon">
 						Descrição
 					</span>
-					<input type="text" name="descricao" class="form-control">
+					<?=cid10(1)?>
+				</div>
+			</div>
+			<div class="col-sm-1">
+				<div class="input-group">
+				<div class="input-group ">
+					<div class="input-group-addon form-control">
+						<span class="glyphicon glyphicon-plus"></span>
+					</div>
 				</div>
 			</div>
 		</div>
