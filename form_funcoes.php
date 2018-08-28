@@ -4,7 +4,7 @@ function cid10($i){
 	$cid=json_decode($json);
 	$id=($i==0)?'cid':'desc-id';
 	$retorno=
-		"<input class='form-control' placeholder='Busque CID' list='{$id}'>".
+		"<input class='form-control' placeholder='Busque CID' list='{$id}' name='{$id}'>".
 		"<datalist id='{$id}'>"
 	;
 	foreach ($cid as $key => $each) {
