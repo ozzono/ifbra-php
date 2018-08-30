@@ -2,15 +2,15 @@
 function cid10($i){
 	$json=file_get_contents('cid10.json');
 	$cid=json_decode($json);
-	$id=($i==0)?'cid':'desc-id';
+	$id=($i==0)?'cid':'desc_cid';
 	$retorno=
-		"<input class='form-control' placeholder='Busque CID' list='{$id}' name='{$id}'>".
+		"<input class='form-control cid' id='{$id}_id' placeholder='Busque CID' list='{$id}' name='{$id}'>".
 		"<datalist id='{$id}'>"
 	;
 	foreach ($cid as $key => $each) {
-		$retorno.="<option value='{$each[0]}'>{$each[$i]}</option>";
+		$retorno.="<option value='{$each[$i]}'>{$each[$i]}</option>";
 	}
-	$retorno.='</datalist>';
+	$retorno.='</datalist><br>';
 	return $retorno;
 }
 

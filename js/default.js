@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var avaliador_count=0;
 	var span_append;
 	var input_append;
+	var cidlist;
 	
 	var pont= new Array(
 		new Array(
@@ -138,6 +139,10 @@ $(document).ready(function(){
 			alert("Nome inválido.");
 			$('#outro_informante').html('outro');
 		}
+	}
+
+	function jsonlog(){
+		loga(this.value);
 	}
 	load_size();
 
@@ -347,7 +352,31 @@ $(document).ready(function(){
 		$('[id="fuzzy-'+checkbox+'"').change();
 
 	});
-	
+	$('.cid').change(function(){
+		search_val=this.value;
+		field_side=this.id;
+		if (field_side=='cid_id') {
+			search_col=0;
+			find_col=1;
+			other_col="#desc_cid_id";
+		}else{
+			search_col=1;
+			find_col=0;
+			other_col="#cid_id";
+		}
+
+		$.get('cid10.json', 
+			function(data) {
+				$.each(data,function(key,val){
+					if (search_val==val[search_col]) {
+						loga(key+":"+val[find_col]);
+						$(other_col).val(val[find_col]);
+					}
+				})
+			},
+			"json"
+		);
+	});
 
 	console.log('loaded successfuly');
 });

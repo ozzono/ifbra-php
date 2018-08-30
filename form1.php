@@ -22,6 +22,7 @@
 </div>
 
 <div class="container form">
+	<br>
 	<b>Formulário 1</b>
 	<span class="glyphicon hover_pointer glyphicon-plus hide_this table_showhide" id="table_show-1"></span>
 	<span class="glyphicon hover_pointer glyphicon-minus table_showhide" id="table_hide-1"></span>
@@ -91,8 +92,6 @@
 					<span class="input-group-addon">
 						<b>Tipo de Deficiência</b>
 					</span>
-					<!-- <select name="tipo_deficiencia" class="form-control"> -->
-					<!-- </select> -->
 					<div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="width: 100%" aria-haspopup="true" aria-expanded="false">
 							<span id="dp-text">&nbsp;</span>
@@ -156,19 +155,14 @@
 					<?=cid10(0)?>
 				</div>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-10">
 				<div class="input-group form-group">
 					<span class="input-group-addon">
 						Descrição
 					</span>
 					<?=cid10(1)?>
-				</div>
-			</div>
-			<div class="col-sm-1">
-				<div class="input-group">
-				<div class="input-group ">
-					<div class="input-group-addon form-control">
-						<span class="glyphicon glyphicon-plus"></span>
+					<div class="input-group-addon">
+						<span class="glyphicon hover_pointer glyphicon-plus"></span>
 					</div>
 				</div>
 			</div>
