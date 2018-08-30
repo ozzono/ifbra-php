@@ -162,10 +162,14 @@
 					</span>
 					<?=cid10(1)?>
 					<div class="input-group-addon">
-						<span class="glyphicon hover_pointer glyphicon-plus"></span>
+						<span class="glyphicon hover_pointer glyphicon-plus" id="add_cid"></span>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="row">
+			<input type="hidden" id="cidlist">
+			<div class="col-sm-12 cidrow text-center hide_this"></div>
 		</div>
 		<div class="row">
 			<div class="col-sm-7">

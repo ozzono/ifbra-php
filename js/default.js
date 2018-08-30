@@ -1,8 +1,9 @@
 $(document).ready(function(){
 	var avaliador_count=0;
+	var cid_count=0;
 	var span_append;
 	var input_append;
-	var cidlist;
+	var cidlist=[];
 	
 	var pont= new Array(
 		new Array(
@@ -40,6 +41,11 @@ $(document).ready(function(){
 			console.log('window size: '+window_size);
 		}
 	});	
+
+	function salva_lista() {
+		$('#cidlist').val(JSON.stringify(cidlist));
+		loga($('#cidlist').val());
+	}
 
 	function varre_total(){
 		retorno=true;
@@ -144,7 +150,8 @@ $(document).ready(function(){
 	function jsonlog(){
 		loga(this.value);
 	}
-	load_size();
+
+	// load_size();
 
 	$('.inss_select').change(function(){
 		var dominio=this.className.split(" ")[0];
@@ -316,6 +323,46 @@ $(document).ready(function(){
 			});
 		});
 	});
+
+	$('#add_cid').click(function(){
+		cid=[$('#cid_id').val(),$('#desc_cid_id').val()];
+		if (cid[0].length>0) {
+			$('#cid_id').val('');
+			$('#desc_cid_id').val('');
+			ref=parseInt(cid_count);
+			cidlist.push({"cid":cid[0],"desc":cid[1]});
+			loga(cidlist);
+			span_append=
+				'<div class="card border-default cidcard float_left" id="cid-'+cid_count+'">'+
+					'<div class="card-footer text-muted">'+
+						'<h5>CID: '+cid[0]+'</h5>'+
+					'</div>'+
+					'<div class="card-body">'+
+						'<h6>'+cid[1]+'</h6>'+
+					'</div>'+
+					'<div class="card-header text-muted">'+
+						'<span id="remove_cid-'+cid_count+'" class="hover_pointer glyphicon glyphicon-minus remove_cid"></span>'+
+					'</div>'
+				'</div>'		
+			;
+			$(".cidrow").append(span_append);
+			cid_count++;
+			$('.cidrow').show();
+			salva_lista();
+		}else{
+			snackbar('Busque um CID.');
+			$('#cid_id').focus();
+		}
+		$('.remove_cid').click(function(){
+			card=this.id.split('-')[1];
+			$('[id="cid-'+card+'"]').fadeOut("slow",function(){
+				$('[id="cid-'+card+'"]').remove();
+			});
+			cidlist[parseInt(card)]='null';
+			salva_lista();
+		});
+	});
+	
 	$('.table_showhide').click(function(){
 		table=this.id.split('-')[1];
 		// console.log(table);
@@ -369,7 +416,6 @@ $(document).ready(function(){
 			function(data) {
 				$.each(data,function(key,val){
 					if (search_val==val[search_col]) {
-						loga(key+":"+val[find_col]);
 						$(other_col).val(val[find_col]);
 					}
 				})

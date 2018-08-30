@@ -4,6 +4,26 @@
 	--default-blue: #2196F3;
 	--default-green: #81DD9D;
 }
+.cidrow{
+	margin-bottom: 1em;
+}
+.cidcard{
+	margin:.2em;
+}
+.remove_cid{
+	background-color: pink;
+	padding: 0.1em;
+	border-radius: 0.2em;
+}
+.card{
+	background-color: white;
+	border-radius: .5em;
+	width: 18%;
+	height: 13em;
+}
+.card-body{
+	margin:1em;
+}
 .total{
 	border-radius: .5em;
 	font-style: bold;
@@ -83,7 +103,7 @@ select,.nowebkit{
 }
 
 .matriz_detalhe{
-	margin: 0em .35em .35em .35em; /*top right bottom left*/
+	margin: 0em .35em .35em 0em; /*top right bottom left*/
 	background-color: white;
 	padding: 0.3em;
 	border-radius: 0.3em;
@@ -98,20 +118,20 @@ select,.nowebkit{
 	/*padding-left: 0.5em;*/
 	margin-top: 0.2em;
 	margin-bottom: 0.2em;
-	/*margin-left: 0.1em;*/
+	margin-left: 0.1em;
 	border-radius: 0.5em;
 }
 .updown{
 	padding:.2em .35em .2em .35em; /*top right bottom left*/
 	background-color: var(--default-gray);
 	border-radius: 0.3em;
-	margin-right: .3em;
+	margin-right: 0.3em;
 }
 .linha_fuzzy{
 	background-color: var(--default-gray);
 	padding: 0.5em;
-	margin: 0.2em;
-	/*margin-left: 0.5em;*/
+	margin-bottom: 0.2em;
+	margin-left: 0.5em;
 	border-radius: 0.5em;
 }
 .dominio{
