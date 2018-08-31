@@ -44,7 +44,6 @@ $(document).ready(function(){
 
 	function salva_lista() {
 		$('#cidlist').val(JSON.stringify(cidlist));
-		loga($('#cidlist').val());
 	}
 
 	function varre_total(){
@@ -69,10 +68,8 @@ $(document).ready(function(){
 					incremento=incremento+parseFloat(parcial[j]);
 				}
 				total[i]=incremento;
-				loga(total);
 			}
 		}
-		loga(verifica);
 		if (verifica) {
 			total[0]=total[0]/7;
 			total[1]=total[1]/7;
@@ -87,7 +84,6 @@ $(document).ready(function(){
 		box=parseFloat(box_col[0]);
 		col=parseFloat(box_col[1]);
 		pont[--col][--box]=valor;
-		loga(pont);
 		soma_total();
 	}
 
@@ -115,7 +111,6 @@ $(document).ready(function(){
 	}
 
 	function inss_each(item){
-		loga(item);
 		my = {};
 		my.namespaced = {};
 		(my.namespaced.item = function() {
@@ -145,10 +140,6 @@ $(document).ready(function(){
 			alert("Nome inválido.");
 			$('#outro_informante').html('outro');
 		}
-	}
-
-	function jsonlog(){
-		loga(this.value);
 	}
 
 	// load_size();
@@ -331,7 +322,6 @@ $(document).ready(function(){
 			$('#desc_cid_id').val('');
 			ref=parseInt(cid_count);
 			cidlist.push({"cid":cid[0],"desc":cid[1]});
-			loga(cidlist);
 			span_append=
 				'<div class="card border-default cidcard float_left" id="cid-'+cid_count+'">'+
 					'<div class="card-footer text-muted">'+
