@@ -4,11 +4,24 @@
 	--default-blue: #2196F3;
 	--default-green: #81DD9D;
 }
+.bottom-02{
+	margin-bottom: 0.2em;
+}
+.cidinfo{
+	padding: .1em;
+	border-radius: .2em;
+}
+#cidlink{
+	background-color: white;
+	color: black;
+	border-radius: .1em;
+	padding: 0em .2em 0em .2em /*top right bottom left*/
+}
 .cidrow{
 	margin-bottom: 1em;
 }
 .cidcard{
-	margin:.2em;
+	margin-bottom:.3em;
 }
 .remove_cid{
 	background-color: pink;
@@ -17,8 +30,8 @@
 }
 .card{
 	background-color: white;
-	border-radius: .5em;
-	width: 18%;
+	border-radius: .4em;
+	width: 100%;
 	height: 13em;
 }
 .card-body{

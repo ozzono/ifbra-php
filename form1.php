@@ -143,8 +143,13 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-2 bottom-02">
 				<b>Diagnóstico Médico</b>
+			</div>
+			<div class="col-sm-10 bottom-02">
+				<div class="bg-primary text-light text-center cidinfo">
+					Consulte a lista completa de CIDs no <a id="cidlink" href="http://www.datasus.gov.br/cid10/V2008/WebHelp/cid10.htm" target="_blank">DATASUS</a>
+				</div>
 			</div>
 		</div>
 
@@ -169,7 +174,7 @@
 		</div>
 		<div class="row">
 			<input type="hidden" id="cidlist">
-			<div class="col-sm-12 cidrow text-center hide_this"></div>
+			<div class="cidrow text-center hide_this"></div>
 		</div>
 		<div class="row">
 			<div class="col-sm-7">

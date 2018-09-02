@@ -323,16 +323,18 @@ $(document).ready(function(){
 			ref=parseInt(cid_count);
 			cidlist.push({"cid":cid[0],"desc":cid[1]});
 			span_append=
-				'<div class="card border-default cidcard float_left" id="cid-'+cid_count+'">'+
-					'<div class="card-footer text-muted">'+
-						'<h5>CID: '+cid[0]+'</h5>'+
+				'<div class="col-sm-4 col-x-3">'+
+					'<div class="card border-default cidcard float_left" id="cid-'+cid_count+'">'+
+						'<div class="card-footer text-muted">'+
+							'<h5>CID: '+cid[0]+'</h5>'+
+						'</div>'+
+						'<div class="card-body">'+
+							'<h6>'+cid[1]+'</h6>'+
+						'</div>'+
+						'<div class="card-header text-muted">'+
+							'<span id="remove_cid-'+cid_count+'" class="hover_pointer glyphicon glyphicon-minus remove_cid"></span>'+
+						'</div>'
 					'</div>'+
-					'<div class="card-body">'+
-						'<h6>'+cid[1]+'</h6>'+
-					'</div>'+
-					'<div class="card-header text-muted">'+
-						'<span id="remove_cid-'+cid_count+'" class="hover_pointer glyphicon glyphicon-minus remove_cid"></span>'+
-					'</div>'
 				'</div>'		
 			;
 			$(".cidrow").append(span_append);
