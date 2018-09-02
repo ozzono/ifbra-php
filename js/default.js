@@ -185,10 +185,13 @@ $(document).ready(function(){
 	$('.dp-box').change(function(){
 		retorno='';
 		count=0;
+		marked=$('.dp-box:checked').length;
 		$('.dp-box').each(function(){
 			if (this.checked) {
-				retorno+=this.value+"; ";
+				pontovirgula=(marked>1)?"; ":"";
+				retorno+=this.value+pontovirgula;
 				count++;
+				marked--;
 			}
 		});
 		// console.log(retorno);
