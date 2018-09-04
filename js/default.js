@@ -5,30 +5,10 @@ $(document).ready(function(){
 	var input_append;
 	var cidlist=[];
 	
-	var pont= new Array(
-		new Array(
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0)
-		),
-		new Array(
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0),
-			parseFloat(0)
-		)
-	);
-	var total=new Array(
-			parseFloat(0),
-			parseFloat(0)
-		);
+	var pont=bigArray(arrayFloat(0,7),2);
+	var total=arrayFloat(0,2);
+	var dom_acumulado=bigArray(arrayInt(0,5),7);
+	loga(dom_acumulado);
 
 	$(window).resize(function () {
 		window_size=$(window).width();
@@ -41,6 +21,52 @@ $(document).ready(function(){
 			console.log('window size: '+window_size);
 		}
 	});	
+
+	function bigArray(valor,tamanho){
+		retorno=new Array();
+		for (var i = 0; i<tamanho; i++) {
+			retorno.push(valor);
+		}
+		return retorno;
+	}
+
+	function arrayInt(valor,tamanho){
+		retorno=new Array();
+		for (var i = 0; i<tamanho; i++) {
+			retorno.push(parseInt(valor));
+		}
+		return retorno;
+	}
+
+	function arrayFloat(valor,tamanho){
+		retorno=new Array();
+		for (var i = 0; i<tamanho; i++) {
+			retorno.push(parseFloat(valor));
+		}
+		return retorno;
+	}
+
+	function novadata(){
+		nova= new Date();
+		mes=nova.getMonth();
+		dia=nova.getDate();
+		ano=nova.getFullYear();
+
+		hora=nova.getHours();
+		min=nova.getMinutes();
+		return ano+'/'+mes+'/'+dia+' '+hora+':'+min;
+	}
+
+	function acumulado(box,$incremento){
+		box=box.split('+');
+		dom_box=parseInt(box[0]);
+		dom_col=parseInt(box[1]);
+		if (incremento) {
+			dom_acumulado[dom_box][dom_col]++;
+		}else{
+			dom_acumulado[dom_box][dom_col]--;
+		}
+	}
 
 	function salva_lista() {
 		$('#cidlist').val(JSON.stringify(cidlist));
@@ -209,8 +235,10 @@ $(document).ready(function(){
 		$('[id="uncheck-'+box).toggle();
 		if (this.checked) {
 			$('[id="ba_inputgroup-'+box).css('background-color','var(--default-blue)');
+			acumulado(box,true);
 		}else{
 			$('[id="ba_inputgroup-'+box).css('background-color','white');
+			acumulado(box,false);
 		}
 	});
 
