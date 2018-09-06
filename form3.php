@@ -1,3 +1,5 @@
+<?php //require_once 'total.php'; ?>
+
 <div class="container form">
 	<b>Formulário 3</b>
 	<span class="glyphicon hover_pointer glyphicon-plus hide_this table_showhide" id="table_show-3"></span>
@@ -76,6 +78,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-1" id="dominio-1.2"></div>
 			</div>
+			<?=acumulado_dominio(1,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(1,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(1,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(1,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(1,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[1]">
@@ -130,6 +137,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-2" id="dominio-2.2"></div>
 			</div>
+			<?=acumulado_dominio(2,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(2,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(2,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(2,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(2,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[2]">
@@ -240,6 +252,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-3" id="dominio-3.2"></div>
 			</div>
+			<?=acumulado_dominio(3,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(3,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(3,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(3,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(3,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[3]">
@@ -407,6 +424,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-4" id="dominio-4.2"></div>
 			</div>
+			<?=acumulado_dominio(4,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(4,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(4,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(4,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(4,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[4]">
@@ -574,6 +596,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-5" id="dominio-5.2"></div>
 			</div>
+			<?=acumulado_dominio(5,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(5,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(5,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(5,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(5,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[5]">
@@ -684,6 +711,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-6" id="dominio-6.2"></div>
 			</div>
+			<?=acumulado_dominio(6,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(6,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(6,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(6,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(6,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[6]">
@@ -794,6 +826,11 @@
 			<div class="col-xs-1">
 				<div class="alert-success form-control dominio-x dominio-7" id="dominio-7.2"></div>
 			</div>
+			<?=acumulado_dominio(7,1)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(7,2)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(7,3)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(7,4)?><!-- ($dom,$coluna) -->
+			<?=acumulado_dominio(7,5)?><!-- ($dom,$coluna) -->
 		</div>
 		<div class="row">
 			<div class="linha_matriz[7]">

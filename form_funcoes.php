@@ -1,4 +1,13 @@
 <?php 
+function acumulado_dominio($dom,$col){
+	echo
+		'<div class="col-xs-1 text-center">'.
+			'<span class="form-control acumulado" id="domcol-'.$dom.'+'.$col.'">'.
+			'</span>'.
+		'</div>'
+	;
+}
+
 function cid10($i){
 	$json=file_get_contents('cid10.json');
 	$cid=json_decode($json);
@@ -107,12 +116,12 @@ function ba_checkbox($i,$j,$k){
 }
 function ba($i,$j,$k){
 	$retorno=
-		'<div class="input-group text-center hover_pointer form-control ba_inputgroup" id="ba_inputgroup-['.$i.']['.$j.']['.$k.']">'.
+		'<div class="input-group text-center hover_pointer form-control ba_inputgroup" id="ba_inputgroup-'.$i.'+'.$j.'+'.$k.'">'.
 			'<div class="input-group-prepend">'.
 				'<div class="input-group-text text-center">'.
-					'<input type="checkbox" disabled class="hide_this ba_inputbox" name="ba_checkbox['.$i.']['.$j.']['.$k.']" id="ba_checkbox-['.$i.']['.$j.']['.$k.']" >'.
-					'<span class="glyphicon glyphicon-check x_check hide_this" id="check-['.$i.']['.$j.']['.$k.']"></span>'.
-					'<span class="glyphicon glyphicon-unchecked x_uncheck" id="uncheck-['.$i.']['.$j.']['.$k.']"></span>'.
+					'<input type="checkbox" disabled class="hide_this ba_inputbox ba_inputbox-'.$i.'" name="ba_checkbox'.$i.'+'.$j.'+'.$k.'" id="ba_checkbox-'.$i.'+'.$j.'+'.$k.'" >'.
+					'<span class="glyphicon glyphicon-check x_check hide_this" id="check-'.$i.'+'.$j.'+'.$k.'"></span>'.
+					'<span class="glyphicon glyphicon-unchecked x_uncheck" id="uncheck-'.$i.'+'.$j.'+'.$k.'"></span>'.
 				'</div>'.
 			'</div>'.
 		'</div>'

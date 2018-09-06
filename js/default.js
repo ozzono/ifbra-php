@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	function loga(printa){console.log(printa);}
+
 	var avaliador_count=0;
 	var cid_count=0;
 	var span_append;
@@ -7,8 +9,21 @@ $(document).ready(function(){
 	
 	var pont=bigArray(arrayFloat(0,7),2);
 	var total=arrayFloat(0,2);
-	var dom_acumulado=bigArray(arrayInt(0,5),7);
-	loga(dom_acumulado);
+	var dom_acumulado=new Array(
+		new Array(5),
+		new Array(5),
+		new Array(5),
+		new Array(5),
+		new Array(5),
+		new Array(5),
+		new Array(5)
+	);
+
+	for (var k = dom_acumulado.length - 1; k >= 0; k--) {//preenche dom_acumulado
+		for (var h = dom_acumulado[k].length - 1; h >= 0; h--) {
+			dom_acumulado[k][h]=0;
+		}
+	}
 
 	$(window).resize(function () {
 		window_size=$(window).width();
@@ -22,153 +37,9 @@ $(document).ready(function(){
 		}
 	});	
 
-	function bigArray(valor,tamanho){
-		retorno=new Array();
-		for (var i = 0; i<tamanho; i++) {
-			retorno.push(valor);
-		}
-		return retorno;
-	}
-
-	function arrayInt(valor,tamanho){
-		retorno=new Array();
-		for (var i = 0; i<tamanho; i++) {
-			retorno.push(parseInt(valor));
-		}
-		return retorno;
-	}
-
-	function arrayFloat(valor,tamanho){
-		retorno=new Array();
-		for (var i = 0; i<tamanho; i++) {
-			retorno.push(parseFloat(valor));
-		}
-		return retorno;
-	}
-
-	function novadata(){
-		nova= new Date();
-		mes=nova.getMonth();
-		dia=nova.getDate();
-		ano=nova.getFullYear();
-
-		hora=nova.getHours();
-		min=nova.getMinutes();
-		return ano+'/'+mes+'/'+dia+' '+hora+':'+min;
-	}
-
-	function acumulado(box,$incremento){
-		box=box.split('+');
-		dom_box=parseInt(box[0]);
-		dom_col=parseInt(box[1]);
-		if (incremento) {
-			dom_acumulado[dom_box][dom_col]++;
-		}else{
-			dom_acumulado[dom_box][dom_col]--;
-		}
-	}
-
-	function salva_lista() {
-		$('#cidlist').val(JSON.stringify(cidlist));
-	}
-
-	function varre_total(){
-		retorno=true;
-		for (var i = pont.length - 1; i >= 0; i--) {
-			for (var j = pont[i].length - 1; j >= 0; j--) {
-				if(pont[i][j]==0){
-					retorno=false;
-				}
-			}
-		}
-		return retorno;
-	}
-
-	function soma_total(){
-		verifica=varre_total();
-		if (verifica) {
-			for (var i = pont.length - 1; i >= 0; i--) {
-			incremento=0;
-				parcial=pont[i];
-				for (var j = parcial.length - 1; j >= 0; j--) {
-					incremento=incremento+parseFloat(parcial[j]);
-				}
-				total[i]=incremento;
-			}
-		}
-		if (verifica) {
-			total[0]=total[0]/7;
-			total[1]=total[1]/7;
-
-			$('#total_ss').html((total[0]).toFixed(3));
-			$('#total_mp').html((total[1]).toFixed(3));
-		}	
-	}
-
-	function pontuacao(box_col,valor){
-		box_col=box_col.split('.');
-		box=parseFloat(box_col[0]);
-		col=parseFloat(box_col[1]);
-		pont[--col][--box]=valor;
-		soma_total();
-	}
-
-	function snackbar($content) {
-		var x = document.getElementById("snackbar");
-		x.className = "show";
-		x.innerHTML=$content;
-		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-		$('#add_avaliador').focus();
-	}
-
-	function calculate_age(birth_month,birth_day,birth_year)
-	{
-		today_date = new Date();
-		today_year = today_date.getFullYear();
-		today_month = today_date.getMonth();
-		today_day = today_date.getDate();
-		age = today_year - birth_year;
-
-		if ( today_month < (birth_month - 1))
-		{age--; }
-		if (((birth_month - 1) == today_month) && (today_day < birth_day))
-		{age--; }
-		$('#idade').val(age);
-	}
-
-	function inss_each(item){
-		my = {};
-		my.namespaced = {};
-		(my.namespaced.item = function() {
-			console.log("constructed");
-		})
-	}
-
-	function loga(printa){console.log(printa);}
-
-	function load_size(){
-		window_size=($(window).width());
-		if (window_size<768) {
-			$('.roll_col').addClass('vertical_text');
-			$('.roll_col').removeClass('text-center');
-		}else{
-			$('.roll_col').removeClass('vertical_text');
-			$('.roll_col').addClass('text-center');
-		}
-	}
-
-	function outro_informante() {
-		var person = prompt("Quem prestou as informações?", "");
-		if (person != null || person!="" || person!="undefined") {
-			$('#outro_informante').html('outro: '+person);
-			$('#informante1').val('outro: '+person);
-		}else{
-			alert("Nome inválido.");
-			$('#outro_informante').html('outro');
-		}
-	}
-
-	// load_size();
+//abre elements
+	$('.acumulado').hide();
+	$('.ba_inputbox').attr('checked',false);
 
 	$('.inss_select').change(function(){
 		var dominio=this.className.split(" ")[0];
@@ -446,6 +317,171 @@ $(document).ready(function(){
 			"json"
 		);
 	});
+//fecha elements
 
-	console.log('loaded successfuly');
+//array functions
+	function bigArray(bigArrayValor,tamanho){
+		bigArrayRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			// indice=intToString(i);
+			// bigArrayRetorno.push({indice:bigArrayValor});
+			// bigArrayRetorno.push({i:bigArrayValor});
+			bigArrayRetorno.push(bigArrayValor);
+		}
+		return bigArrayRetorno;
+	}
+
+	function arrayInt(arrayIntValor,tamanho){
+		arrayIntRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			arrayIntRetorno.push(parseInt(arrayIntValor));
+		}
+		return arrayIntRetorno;
+	}
+
+	function arrayFloat(arrayFloatValor,tamanho){
+		arrayFloatRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			arrayFloatRetorno.push(parseFloat(arrayFloatValor));
+		}
+		return arrayFloatRetorno;
+	}
+//array functions
+
+//começa functions
+	function acumulado_print(i,j){
+		ref_i=i++;ref_j=j++;
+		if (dom_acumulado[ref_i][ref_j]==0) {
+			$('[id="domcol-'+i+'+'+j+'"]').hide();
+		}else{
+			$('[id="domcol-'+i+'+'+j+'"]').show();
+		}
+		loga('ref_domcol-'+ref_i+'+'+ref_j);
+		loga('domcol-'+i+'+'+j);
+		$('[id="domcol-'+i+'+'+j+'"]').html(dom_acumulado[ref_i][ref_j]);
+	}
+
+	function novadata(){
+		nova= new Date();
+		mes=nova.getMonth();
+		dia=nova.getDate();
+		ano=nova.getFullYear();
+
+		hora=nova.getHours();
+		min=nova.getMinutes();
+		return ano+'/'+mes+'/'+dia+' '+hora+':'+min;
+	}
+
+	function acumulado(box,incremento){
+		//box[i][j][k] i=>dominio; j=>linha; i=>coluna
+		box=box.split('+');
+		i=--box[0];
+		j=--box[2];
+		if (incremento) {
+			dom_acumulado[i][j]++;
+		}else{
+			dom_acumulado[i][j]--;
+		}
+		acumulado_print(i,j);
+	}
+
+	function salva_lista() {
+		$('#cidlist').val(JSON.stringify(cidlist));
+	}
+
+	function varre_total(){
+		retorno=true;
+		for (var i = pont.length - 1; i >= 0; i--) {
+			for (var j = pont[i].length - 1; j >= 0; j--) {
+				if(pont[i][j]==0){
+					retorno=false;
+				}
+			}
+		}
+		return retorno;
+	}
+
+	function soma_total(){
+		verifica=varre_total();
+		if (verifica) {
+			for (var i = pont.length - 1; i >= 0; i--) {
+			incremento=0;
+				parcial=pont[i];
+				for (var j = parcial.length - 1; j >= 0; j--) {
+					incremento=incremento+parseFloat(parcial[j]);
+				}
+				total[i]=incremento;
+			}
+		}
+		if (verifica) {
+			total[0]=total[0]/7;
+			total[1]=total[1]/7;
+
+			$('#total_ss').html((total[0]).toFixed(3));
+			$('#total_mp').html((total[1]).toFixed(3));
+		}	
+	}
+
+	function pontuacao(box_col,valor){
+		box_col=box_col.split('.');
+		box=parseFloat(box_col[0]);
+		col=parseFloat(box_col[1]);
+		pont[--col][--box]=valor;
+		soma_total();
+	}
+
+	function snackbar($content) {
+		var x = document.getElementById("snackbar");
+		x.className = "show";
+		x.innerHTML=$content;
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		$('#add_avaliador').focus();
+	}
+
+	function calculate_age(birth_month,birth_day,birth_year){
+		today_date = new Date();
+		today_year = today_date.getFullYear();
+		today_month = today_date.getMonth();
+		today_day = today_date.getDate();
+		age = today_year - birth_year;
+
+		if ( today_month < (birth_month - 1))
+		{age--; }
+		if (((birth_month - 1) == today_month) && (today_day < birth_day))
+		{age--; }
+		$('#idade').val(age);
+	}
+
+	function inss_each(item){
+		my = {};
+		my.namespaced = {};
+		(my.namespaced.item = function() {
+			console.log("constructed");
+		})
+	}
+
+	function load_size(){
+		window_size=($(window).width());
+		if (window_size<768) {
+			$('.roll_col').addClass('vertical_text');
+			$('.roll_col').removeClass('text-center');
+		}else{
+			$('.roll_col').removeClass('vertical_text');
+			$('.roll_col').addClass('text-center');
+		}
+	}
+
+	function outro_informante() {
+		var person = prompt("Quem prestou as informações?", "");
+		if (person != null || person!="" || person!="undefined") {
+			$('#outro_informante').html('outro: '+person);
+			$('#informante1').val('outro: '+person);
+		}else{
+			alert("Nome inválido.");
+			$('#outro_informante').html('outro');
+		}
+	}
+//fecha functions
+
+console.log('loaded successfuly');
 });
