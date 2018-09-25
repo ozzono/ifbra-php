@@ -3,18 +3,23 @@
 	--dark-gray: #807F7F;
 	--default-blue: #2196F3;
 	--default-green: #81DD9D;
+	--xs-radius: .1em;
+	--sm-radius: .2em;
+	--md-radius: .3em;
+	--lg-radius: .4em;
+	--xl-radius: .5em;
 }
 .bottom-02{
 	margin-bottom: 0.2em;
 }
 .cidinfo{
 	padding: .1em;
-	border-radius: .2em;
+	border-radius: var(--sm-radius);
 }
 #cidlink{
 	background-color: white;
 	color: black;
-	border-radius: .1em;
+	border-radius: var(--xs-radius);
 	padding: 0em .2em 0em .2em /*top right bottom left*/
 }
 .cidrow{
@@ -26,11 +31,11 @@
 .remove_cid{
 	background-color: pink;
 	padding: 0.1em;
-	border-radius: 0.2em;
+	border-radius: var(--sm-radius);
 }
 .card{
 	background-color: white;
-	border-radius: .4em;
+	border-radius: var(--lg-radius);
 	width: 100%;
 	height: 13em;
 }
@@ -38,7 +43,7 @@
 	margin:1em;
 }
 .total{
-	border-radius: .5em;
+	border-radius: var(--xl-radius);
 	font-style: bold;
 	font-size: 2em;
 	margin-top: 2em;
@@ -56,7 +61,7 @@
 	padding-right: 1em;
 }
 .total_dominio{
-	border-radius: .3em;
+	border-radius: var(--md-radius);
 	line-height: 100%;
 	padding: .7em .7em .7em .7em; /*top right bottom left*/
 }
@@ -103,10 +108,10 @@ select,.nowebkit{
 	background-color: var(--default-gray);
 	padding: 0.5em;
 	margin-bottom: 0.5em;
-	border-radius: 0.5em;
+	border-radius: var(--xl-radius);
 }
 .row{
-	border-radius: .5em;
+	border-radius: var(--xl-radius);
 	margin-bottom: .1em;
 	margin-top: .1em;
 }
@@ -119,7 +124,7 @@ select,.nowebkit{
 	margin: 0em .35em .35em 0em; /*top right bottom left*/
 	background-color: white;
 	padding: 0.3em;
-	border-radius: 0.3em;
+	border-radius: var(--md-radius);
 }
 .texto_matriz{
 	margin-left: 0.5em;
@@ -132,12 +137,12 @@ select,.nowebkit{
 	margin-top: 0.2em;
 	margin-bottom: 0.2em;
 	margin-left: 0.1em;
-	border-radius: 0.5em;
+	border-radius: var(--xl-radius);
 }
 .updown{
 	padding:.2em .35em .2em .35em; /*top right bottom left*/
 	background-color: var(--default-gray);
-	border-radius: 0.3em;
+	border-radius: var(--md-radius);
 	margin-right: 0.3em;
 }
 .linha_fuzzy{
@@ -145,7 +150,7 @@ select,.nowebkit{
 	padding: 0.5em;
 	margin-bottom: 0.2em;
 	margin-left: 0.5em;
-	border-radius: 0.5em;
+	border-radius: var(--xl-radius);
 }
 .dominio{
 	margin-top: 0.2em;
@@ -184,7 +189,7 @@ select,.nowebkit{
 	color: white;
 	background-color: var(--dark-gray);
 	padding: 0.5em;
-	border-radius: 0.5em;
+	border-radius: var(--xl-radius);
 	margin-right: 1em;
 	text-align: center;
 }

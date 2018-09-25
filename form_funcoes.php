@@ -42,8 +42,10 @@ function matriz_detalhe($i,$j,$detalhe,$valida_detalhe=true){
 	$return='';
 	if ($valida_detalhe) {
 		$return=
+			'<div class="detalhe" id="detalhe-['.$i.']['.$j.']">'.
+				$detalhe.
+			'</div>'.
 			'<span class="align-self-center glyphicon hover_pointer float_right text-center glyphicon-plus matriz_detalhe" id="mright-['.$i.']['.$j.']">'.
-				'<input type="hidden" id="matriz_detalhe-['.$i.']['.$j.']" value="'.$detalhe.'">'.
 			'</span>'
 		;
 	};
