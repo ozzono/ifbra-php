@@ -25,17 +25,17 @@ $(document).ready(function(){
 		}
 	}
 
-	$(window).resize(function () {
-		window_size=$(window).width();
-		if (window_size<768) {
-			$('.roll_col').addClass('vertical_text');
-			$('.roll_col').removeClass('text-center');
-		}else{
-			$('.roll_col').removeClass('vertical_text');
-			$('.roll_col').addClass('text-center');
-			console.log('window size: '+window_size);
-		}
-	});	
+	// $(window).resize(function () {
+	// 	window_size=$(window).width();
+	// 	if (window_size<768) {
+	// 		$('.roll_col').addClass('vertical_text');
+	// 		$('.roll_col').removeClass('text-center');
+	// 	}else{
+	// 		$('.roll_col').removeClass('vertical_text');
+	// 		$('.roll_col').addClass('text-center');
+	// 		console.log('window size: '+window_size);
+	// 	}
+	// });	
 
 //abre elements
 	$('.acumulado').hide();
