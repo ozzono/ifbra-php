@@ -31,12 +31,10 @@ function checkbox($i,$j){
 function pop_detalhe($i,$j,$detalhe,$valida_detalhe=true){
 	if ($valida_detalhe) {
 		$return=
-			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-plus pop_detalhe" id="right-['.$i.']['.$j.']">'.
-			'</span><br>'.
-			'<div class="detalhe" id="detalhe-['.$i.']['.$j.']">'.
-				$detalhe.
-			'</div>'
-
+			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-plus pop_detalhe float_right" id="rightplus-['.$i.']['.$j.']">'.
+			'</span>'.
+			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-minus pop_detalhe float_right hide_this" id="rightminus-['.$i.']['.$j.']">'.
+			'</span>'
 		;
 	};
 	echo $return;
