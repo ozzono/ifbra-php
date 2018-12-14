@@ -1,5 +1,7 @@
 <?php require_once 'cabecalho.php'; ?>
 <?php require_once 'form_funcoes.php'; ?>
+
+<?php $form_filter=$_GET['filter']; ?>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
@@ -18,10 +20,18 @@
 </div>
 
 <form action="">
-	<?php require_once 'form1.php'; ?>
-	<?php //require_once 'form2.php'; ?>
-	<?php require_once 'form3.php'; ?>
-	<?php //require_once 'form4.php'; ?>
+	<?php 
+	if (isset($form_filter)) {
+		$form_filter=explode("*", $form_filter);
+		foreach ($form_filter as $filter) {
+			require_once 'form'.$filter.'.php';
+		}
+	}else{
+		require_once 'form1.php';
+		require_once 'form2.php';
+		require_once 'form3.php';
+		require_once 'form4.php';
+	}
+	?>
 </form>
-
 <?php require_once("rodape.php"); ?>
