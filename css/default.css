@@ -1,5 +1,6 @@
 :root{
 	--default-gray: #eee;
+	--medium-gray: #C4C3C3;
 	--dark-gray: #807F7F;
 	--default-blue: #2196F3;
 	--default-green: #81DD9D;
@@ -69,7 +70,7 @@
 	color: white;
 }
 body{
-	background-color: #C4C3C3;
+	background-color: var(--medium-gray);
 }
 select,.nowebkit{
 	-moz-appearance: none;
@@ -148,7 +149,8 @@ select,.nowebkit{
 .linha_fuzzy{
 	background-color: var(--default-gray);
 	padding: 0.5em;
-	margin-bottom: 0.2em;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
 	margin-left: 0.5em;
 	border-radius: var(--xl-radius);
 }
