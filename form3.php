@@ -90,7 +90,7 @@
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">
 							1.1 Observar
-							<?=matriz_detalhe(1,1,'Enxergar, reconhecer, e interpretar o que enxerga')?>
+							<?=matriz_detalhe(1,1,'Enxergar, reconhecer, e interpretar o que enxerga.')?>
 						</div>
 					</div>
 				</div>
@@ -110,7 +110,7 @@
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">
 							1.2 Ouvir
-							<?=matriz_detalhe(1,2,'Perceber, discriminar, reconhecer e interpretar sons')?>
+							<?=matriz_detalhe(1,2,'Perceber, discriminar, reconhecer e interpretar sons.')?>
 						</div>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 					<div class="linha_matriz">
 						<div class="texto_matriz align-items-start">
 							2.1 Comunicar-se
-							<?=matriz_detalhe(2,1,'Compreender mensagens')?>
+							<?=matriz_detalhe(2,1,'Compreender mensagens.')?>
 						</div>
 					</div>
 				</div>

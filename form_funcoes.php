@@ -31,9 +31,12 @@ function checkbox($i,$j){
 function pop_detalhe($i,$j,$detalhe,$valida_detalhe=true){
 	if ($valida_detalhe) {
 		$return=
-			'<span class="glyphicon hover_pointer form-control glyphicon-plus pop_detalhe" id="right-['.$i.']['.$j.']">'.
-				'<input type="hidden" id="detalhe-['.$i.']['.$j.']" value="'.$detalhe.'">'.
-			'</span>'
+			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-plus pop_detalhe" id="right-['.$i.']['.$j.']">'.
+			'</span><br>'.
+			'<div class="detalhe" id="detalhe-['.$i.']['.$j.']">'.
+				$detalhe.
+			'</div>'
+
 		;
 	};
 	echo $return;
@@ -42,11 +45,13 @@ function matriz_detalhe($i,$j,$detalhe,$valida_detalhe=true){
 	$return='';
 	if ($valida_detalhe) {
 		$return=
-			'<div class="detalhe" id="detalhe-['.$i.']['.$j.']">'.
+			'<span class="align-self-center glyphicon hover_pointer float_right text-center glyphicon-plus matriz_detalhe" id="plusright-['.$i.']['.$j.']">'.
+			'</span>'.
+			'<span class="align-self-center hide_this glyphicon hover_pointer float_right text-center glyphicon-minus matriz_detalhe" id="minusright-['.$i.']['.$j.']">'.
+			'</span>'.
+			'<div class="detalhe hide_this" id="detalhe-['.$i.']['.$j.']">'.
 				$detalhe.
-			'</div>'.
-			'<span class="align-self-center glyphicon hover_pointer float_right text-center glyphicon-plus matriz_detalhe" id="mright-['.$i.']['.$j.']">'.
-			'</span>'
+			'</div>'
 		;
 	};
 	echo $return;

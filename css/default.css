@@ -165,13 +165,14 @@ select,.nowebkit{
 	text-align: center;
 }
 .glyphicon-minus{
-	color: red;
+	/*color: red;*/
 }
 .linha_avaliador{
 	padding: 3em 0;
 }
 .detalhe{
-	display: none;
+	padding: 1em;
+	font-style: italic;
 }
 .hide_this{
 	display: none;
