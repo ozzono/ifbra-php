@@ -38,9 +38,9 @@ $(document).ready(function(){
 		var grau='';
 		if (resumo<=5739) {
 			grau='Grave'
-		}else if (resumo>=5740 || resumo<=6354) {
+		}else if (resumo<=6354) {
 			grau='Moderado'
-		}else if (resumo>=6355 || resumo<=7584) {
+		}else if (resumo<=7584) {
 			grau='Leve'
 		}else{
 			grau='Insuficiente<b>*</b>';
