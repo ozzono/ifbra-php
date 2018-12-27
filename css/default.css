@@ -219,6 +219,7 @@ select,.nowebkit{
 	padding: 0.5em;
 	border-radius: var(--xl-radius);
 	margin-right: 1em;
+	margin-top: 1em;
 	text-align: center;
 }
 .form{

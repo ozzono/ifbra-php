@@ -294,8 +294,8 @@ $(document).ready(function(){
 	$('.ba_inputbox').change(function(){
 		box=this.id.split("-")[1];
 		box_id='#check-'+box;
-		$('[id="check-'+box).toggle();
-		$('[id="uncheck-'+box).toggle();
+		$('[id="check-'+box).toggle('slow');
+		$('[id="uncheck-'+box).toggle('slow');
 		if (this.checked) {
 			$('[id="ba_inputgroup-'+box).css('background-color','var(--default-blue)');
 			acumulado(box,true);
@@ -340,14 +340,14 @@ $(document).ready(function(){
 		var ref_id=this.id.split("-")[1];
 		var plus='rightplus-'+ref_id;
 		var minus='rightminus-'+ref_id;
-		$('[id="detalhe-'+ref_id+'"').toggle();
-		$('[id="'+plus+'"').toggle();
-		$('[id="'+minus+'"').toggle();
+		$('[id="detalhe-'+ref_id+'"').toggle('slow');
+		$('[id="'+plus+'"').toggle('slow');
+		$('[id="'+minus+'"').toggle('slow');
 		// console.log(ref_id);
 		// snackbar($('[id="detalhe-'+ref_id+'"').val());
-		// $('[id="down-'+ref_id+'"').toggle();
-		// $('[id="right-'+ref_id+'"').toggle();
-		// $('[id="detalhe-'+ref_id+'"').toggle();
+		// $('[id="down-'+ref_id+'"').toggle('slow');
+		// $('[id="right-'+ref_id+'"').toggle('slow');
+		// $('[id="detalhe-'+ref_id+'"').toggle('slow');
 	});
 
 	$('.matriz_detalhe').click(function(){
@@ -356,25 +356,25 @@ $(document).ready(function(){
 		plusright='plusright-'+ref_id;
 		minusright='minusright-'+ref_id;
 		// $('#'+detalhe).hide();
-		$('[id="'+detalhe+'"').toggle();
-		$('[id="'+plusright+'"').toggle();
-		$('[id="'+minusright+'"').toggle();
+		$('[id="'+detalhe+'"').toggle('slow');
+		$('[id="'+plusright+'"').toggle('slow');
+		$('[id="'+minusright+'"').toggle('slow');
 	});
 
 	$('.funcao').click(function(){
 		var ref_id=this.id.split('-')[1];
 		// console.log(ref_id);
-		$('[class="funcao'+ref_id+'"').toggle();
-		$('[id="right-'+ref_id+'"').toggle();
-		$('[id="down-'+ref_id+'"').toggle();
+		$('[class="funcao'+ref_id+'"').toggle('slow');
+		$('[id="right-'+ref_id+'"').toggle('slow');
+		$('[id="down-'+ref_id+'"').toggle('slow');
 	});
 
 	$('.matriz_updown').click(function(){
 		var ref_id=this.id.split('-')[1];
 		console.log(ref_id);
-		$('[class="linha_matriz'+ref_id+'"').toggle();
-		$('[id="mright-'+ref_id+'"').toggle();
-		$('[id="mdown-'+ref_id+'"').toggle();
+		$('[class="linha_matriz'+ref_id+'"').toggle('slow');
+		$('[id="mright-'+ref_id+'"').toggle('slow');
+		$('[id="mdown-'+ref_id+'"').toggle('slow');
 	});
 
 	$("#datepicker2").change(function (){
@@ -457,15 +457,15 @@ $(document).ready(function(){
 	$('.table_showhide').click(function(){
 		table=this.id.split('-')[1];
 		// console.log(table);
-		$('[id="table'+table+'"').toggle();
-		$('[id="table_show-'+table+'"').toggle();
-		$('[id="table_hide-'+table+'"').toggle();
-		// $('.table_show').toggle();
-		// $('#table1').toggle();
+		$('[id="table'+table+'"').toggle('slow');
+		$('[id="table_show-'+table+'"').toggle('slow');
+		$('[id="table_hide-'+table+'"').toggle('slow');
+		// $('.table_show').toggle('slow');
+		// $('#table1').toggle('slow');
 	});
 	$('.table_showhide2').click(function(){
-		$('.table_showhide2').toggle();
-		$('#table2').toggle();
+		$('.table_showhide2').toggle('slow');
+		$('#table2').toggle('slow');
 	});
 	$('.fuzzy_checkbox').change(function(){
 		checkbox=this.id.split('-')[1];
