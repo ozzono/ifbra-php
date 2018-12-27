@@ -78,7 +78,7 @@ function select_avaliacao($i,$j){
 function inss($i,$j,$k,$col){
 	$retorno=
 		'<select name="inss['.$i.']['.$j.']['.$k.']" id="inss-'.$i.'.'.$j.'.'.$k.'" class="inss_select-'.$i.'.'.$j.' coluna-'.$col.' nowebkit inss_select form-control">'.
-			'<option value="null" class="disable_this alert-danger"></option>'.
+			'<option value="0" class="disable_this alert-danger"></option>'.
 			'<option value="25">25</option>'.
 			'<option value="50">50</option>'.
 			'<option value="75">75</option>'.

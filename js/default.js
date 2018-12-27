@@ -1,13 +1,201 @@
+//array functions
+	function bigArray(bigArrayValor,tamanho){
+		bigArrayRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			// indice=intToString(i);
+			// bigArrayRetorno.push({indice:bigArrayValor});
+			// bigArrayRetorno.push({i:bigArrayValor});
+			bigArrayRetorno.push(bigArrayValor);
+		}
+		return bigArrayRetorno;
+	}
+
+	function arrayInt(arrayIntValor,tamanho){
+		arrayIntRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			arrayIntRetorno.push(parseInt(arrayIntValor));
+		}
+		return arrayIntRetorno;
+	}
+
+	function arrayFloat(arrayFloatValor,tamanho){
+		arrayFloatRetorno=[];
+		for (var i = 0; i<tamanho; i++) {
+			arrayFloatRetorno.push(parseFloat(arrayFloatValor));
+		}
+		return arrayFloatRetorno;
+	}
+//array functions
+var pont0=arrayFloat(0,7);
+var pont1=arrayFloat(0,7);
+
 $(document).ready(function(){
 	function loga(printa){console.log(printa);}
+
+
+//começa functions
+	function classifica(resumo){
+		var grau='';
+		if (resumo<=5739) {
+			grau='Grave'
+		}else if (resumo>=5740 || resumo<=6354) {
+			grau='Moderado'
+		}else if (resumo>=6355 || resumo<=7584) {
+			grau='Leve'
+		}else{
+			grau='Insuficiente<b>*</b>';
+		}
+		$('#grau').html(grau);
+	}
+
+	function acumulado_print(i,j){
+		ref_i=i++;ref_j=j++;
+		if (dom_acumulado[ref_i][ref_j]==0) {
+			$('[id="domcol-'+i+'+'+j+'"]').hide();
+		}else{
+			$('[id="domcol-'+i+'+'+j+'"]').show();
+		}
+		$('[id="domcol-'+i+'+'+j+'"]').html(dom_acumulado[ref_i][ref_j]);
+	}
+
+	function novadata(){
+		nova= new Date();
+		mes=nova.getMonth();
+		dia=nova.getDate();
+		ano=nova.getFullYear();
+
+		hora=nova.getHours();
+		min=nova.getMinutes();
+		return ano+'/'+mes+'/'+dia+' '+hora+':'+min;
+	}
+
+	function acumulado(box,incremento){
+		//box[i][j][k] i=>dominio; j=>linha; i=>coluna
+		box=box.split('+');
+		i=--box[0];
+		j=--box[2];
+		if (incremento) {
+			dom_acumulado[i][j]++;
+		}else{
+			dom_acumulado[i][j]--;
+		}
+		acumulado_print(i,j);
+	}
+
+	function salva_lista() {
+		$('#cidlist').val(JSON.stringify(cidlist));
+	}
+
+	function varre_total(){
+		retorno=true;
+		for (var i = pont0.length - 1; i >= 0; i--) {
+			if(pont0[i]=='0' ||pont1[i]=='0' ){
+				retorno=false;
+			}
+		}
+		return retorno;
+	}
+
+	function soma_total(){
+		verifica=varre_total();
+		if (verifica) {
+			incremento1=0;
+			incremento2=0;
+			for (var i = pont0.length - 1; i >= 0; i--) {
+				incremento1=incremento1+parseFloat(pont0[i]);
+			}
+			for (var i = pont1.length - 1; i >= 0; i--) {
+				incremento2=incremento2+parseFloat(pont1[i]);
+			}
+			total[0]=incremento1;
+			total[1]=incremento2;
+
+			//total[0]=total[0]/7;
+			//total[1]=total[1]/7;
+			total_resumo=total[0]+total[1];
+
+			$('#total_ss').html(total[0]);
+			$('#total_mp').html(total[1]);
+			$('#total_resumo').html(total_resumo);
+			classifica(total_resumo);
+		}	
+	}
+
+	function pontuacao(box_col,valor) {
+		box_col=box_col.split('.');
+		box=parseFloat(box_col[0]);
+		col=parseFloat(box_col[1]);
+		--box;
+		--col;	
+		if (col==0) {
+			pont0[box]=valor;
+		}else{
+			pont1[box]=valor;
+		}
+		soma_total();
+	}
+
+	function snackbar($content) {
+		var x = document.getElementById("snackbar");
+		x.className = "show";
+		x.innerHTML=$content;
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		$('#add_avaliador').focus();
+	}
+
+	function calculate_age(birth_month,birth_day,birth_year){
+		today_date = new Date();
+		today_year = today_date.getFullYear();
+		today_month = today_date.getMonth();
+		today_day = today_date.getDate();
+		age = today_year - birth_year;
+
+		if ( today_month < (birth_month - 1))
+		{age--; }
+		if (((birth_month - 1) == today_month) && (today_day < birth_day))
+		{age--; }
+		$('#idade').val(age);
+	}
+
+	function inss_each(item){
+		my = {};
+		my.namespaced = {};
+		(my.namespaced.item = function() {
+			console.log("constructed");
+		})
+	}
+
+	function load_size(){
+		window_size=($(window).width());
+		if (window_size<768) {
+			$('.roll_col').addClass('vertical_text');
+			$('.roll_col').removeClass('text-center');
+		}else{
+			$('.roll_col').removeClass('vertical_text');
+			$('.roll_col').addClass('text-center');
+		}
+	}
+
+	function outro_informante() {
+		var person = prompt("Quem prestou as informações?", "");
+		if (person != null || person!="" || person!="undefined") {
+			$('#outro_informante').html('outro: '+person);
+			$('#informante1').val('outro: '+person);
+		}else{
+			alert("Nome inválido.");
+			$('#outro_informante').html('outro');
+		}
+	}
+//fecha functions
+
 
 	var avaliador_count=0;
 	var cid_count=0;
 	var span_append;
 	var input_append;
 	var cidlist=[];
-	
-	var pont=bigArray(arrayFloat(0,7),2);
+
+	// var pont=bigArray(arrayFloat(0,7),2);
 	var total=arrayFloat(0,2);
 	var dom_acumulado=new Array(
 		new Array(5),
@@ -38,6 +226,7 @@ $(document).ready(function(){
 	// });	
 
 //abre elements
+	$('.inss_select').val('0');
 	$('.acumulado').hide();
 	$('.ba_inputbox').attr('checked',false);
 
@@ -45,18 +234,16 @@ $(document).ready(function(){
 		var dominio=this.className.split(" ")[0];
 		dom_col=dominio.split('-')[1];
 		dom_box=dominio.split('-')[1].split('.');
-		i=0;
 		valida=true;
 		valor=0;
 		$('[class^="'+dominio+'"]').each(function(){
-			if (this.value=='null') {
+			if (this.value=='0') {
 				valida=false;
 			}
 		});
 		if (valida) {
 			$('[class^="'+dominio+'"]').each(function(){
 				valor+=parseFloat(this.value);
-				i++;
 			});
 			// valor=(valor/i).toFixed(3);
 
@@ -163,7 +350,6 @@ $(document).ready(function(){
 		detalhe='detalhe-'+ref_id;
 		plusright='plusright-'+ref_id;
 		minusright='minusright-'+ref_id;
-		loga(detalhe);
 		// $('#'+detalhe).hide();
 		$('[id="'+detalhe+'"').toggle();
 		$('[id="'+plusright+'"').toggle();
@@ -325,173 +511,6 @@ $(document).ready(function(){
 	});
 //fecha elements
 
-//array functions
-	function bigArray(bigArrayValor,tamanho){
-		bigArrayRetorno=[];
-		for (var i = 0; i<tamanho; i++) {
-			// indice=intToString(i);
-			// bigArrayRetorno.push({indice:bigArrayValor});
-			// bigArrayRetorno.push({i:bigArrayValor});
-			bigArrayRetorno.push(bigArrayValor);
-		}
-		return bigArrayRetorno;
-	}
-
-	function arrayInt(arrayIntValor,tamanho){
-		arrayIntRetorno=[];
-		for (var i = 0; i<tamanho; i++) {
-			arrayIntRetorno.push(parseInt(arrayIntValor));
-		}
-		return arrayIntRetorno;
-	}
-
-	function arrayFloat(arrayFloatValor,tamanho){
-		arrayFloatRetorno=[];
-		for (var i = 0; i<tamanho; i++) {
-			arrayFloatRetorno.push(parseFloat(arrayFloatValor));
-		}
-		return arrayFloatRetorno;
-	}
-//array functions
-
-//começa functions
-	function acumulado_print(i,j){
-		ref_i=i++;ref_j=j++;
-		if (dom_acumulado[ref_i][ref_j]==0) {
-			$('[id="domcol-'+i+'+'+j+'"]').hide();
-		}else{
-			$('[id="domcol-'+i+'+'+j+'"]').show();
-		}
-		loga('ref_domcol-'+ref_i+'+'+ref_j);
-		loga('domcol-'+i+'+'+j);
-		$('[id="domcol-'+i+'+'+j+'"]').html(dom_acumulado[ref_i][ref_j]);
-	}
-
-	function novadata(){
-		nova= new Date();
-		mes=nova.getMonth();
-		dia=nova.getDate();
-		ano=nova.getFullYear();
-
-		hora=nova.getHours();
-		min=nova.getMinutes();
-		return ano+'/'+mes+'/'+dia+' '+hora+':'+min;
-	}
-
-	function acumulado(box,incremento){
-		//box[i][j][k] i=>dominio; j=>linha; i=>coluna
-		box=box.split('+');
-		i=--box[0];
-		j=--box[2];
-		if (incremento) {
-			dom_acumulado[i][j]++;
-		}else{
-			dom_acumulado[i][j]--;
-		}
-		acumulado_print(i,j);
-	}
-
-	function salva_lista() {
-		$('#cidlist').val(JSON.stringify(cidlist));
-	}
-
-	function varre_total(){
-		retorno=true;
-		for (var i = pont.length - 1; i >= 0; i--) {
-			for (var j = pont[i].length - 1; j >= 0; j--) {
-				if(pont[i][j]==0){
-					retorno=false;
-				}
-			}
-		}
-		return retorno;
-	}
-
-	function soma_total(){
-		verifica=varre_total();
-		if (verifica) {
-			for (var i = pont.length - 1; i >= 0; i--) {
-			incremento=0;
-				parcial=pont[i];
-				for (var j = parcial.length - 1; j >= 0; j--) {
-					incremento=incremento+parseFloat(parcial[j]);
-				}
-				total[i]=incremento;
-			}
-		}
-		if (verifica) {
-			//total[0]=total[0]/7;
-			//total[1]=total[1]/7;
-
-			$('#total_ss').html((total[0]).toFixed(3));
-			$('#total_mp').html((total[1]).toFixed(3));
-			$('#final').html((total[0]+total[1]).toFixed(3));
-			loga('total[0]='+total[0]);
-			loga('total[1]='+total[1]);
-			loga('########');
-		}	
-	}
-
-	function pontuacao(box_col,valor){
-		box_col=box_col.split('.');
-		box=parseFloat(box_col[0]);
-		col=parseFloat(box_col[1]);
-		pont[--col][--box]=valor;
-		soma_total();
-	}
-
-	function snackbar($content) {
-		var x = document.getElementById("snackbar");
-		x.className = "show";
-		x.innerHTML=$content;
-		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-		$('#add_avaliador').focus();
-	}
-
-	function calculate_age(birth_month,birth_day,birth_year){
-		today_date = new Date();
-		today_year = today_date.getFullYear();
-		today_month = today_date.getMonth();
-		today_day = today_date.getDate();
-		age = today_year - birth_year;
-
-		if ( today_month < (birth_month - 1))
-		{age--; }
-		if (((birth_month - 1) == today_month) && (today_day < birth_day))
-		{age--; }
-		$('#idade').val(age);
-	}
-
-	function inss_each(item){
-		my = {};
-		my.namespaced = {};
-		(my.namespaced.item = function() {
-			console.log("constructed");
-		})
-	}
-
-	function load_size(){
-		window_size=($(window).width());
-		if (window_size<768) {
-			$('.roll_col').addClass('vertical_text');
-			$('.roll_col').removeClass('text-center');
-		}else{
-			$('.roll_col').removeClass('vertical_text');
-			$('.roll_col').addClass('text-center');
-		}
-	}
-
-	function outro_informante() {
-		var person = prompt("Quem prestou as informações?", "");
-		if (person != null || person!="" || person!="undefined") {
-			$('#outro_informante').html('outro: '+person);
-			$('#informante1').val('outro: '+person);
-		}else{
-			alert("Nome inválido.");
-			$('#outro_informante').html('outro');
-		}
-	}
-//fecha functions
 
 console.log('loaded successfuly');
 });

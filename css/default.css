@@ -10,6 +10,20 @@
 	--lg-radius: .4em;
 	--xl-radius: .5em;
 }
+table{
+	width: 100%;
+	padding: 1em;
+}
+.bordered{
+	border-right: 0.1em solid var(--medium-gray);
+}
+td{
+	padding: 0.2em;
+}
+.resumo{
+	font-size: 2em;
+	border-radius: 0.5em;
+}
 .bottom-02{
 	margin-bottom: 0.2em;
 }
