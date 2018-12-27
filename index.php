@@ -27,6 +27,7 @@
 			require_once 'form'.$filter.'.php';
 		}
 	}else{
+		require_once 'form0.php';
 		require_once 'form1.php';
 		require_once 'form2.php';
 		require_once 'form3.php';

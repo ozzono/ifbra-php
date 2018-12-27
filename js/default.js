@@ -49,6 +49,7 @@ $(document).ready(function(){
 			grau='Insuficiente<b>*</b>';
 			$('#insuficiente').show();
 		}
+		$('.resumo').show();
 		$('#grau').html(grau);
 	}
 
