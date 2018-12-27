@@ -20,7 +20,7 @@
 			</div>
 			<div class="col-xs-5 col-sm-5">
 				<div>
-					<b>Barreira Ambiental</b>
+					<b>Barreira Ambiental <span class="legenda_link"><a href="legenda.php?ref=legenda">(Legenda)</a></span></b>
 				</div>
 			</div>
 		</div>
