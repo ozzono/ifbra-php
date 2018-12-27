@@ -1,4 +1,4 @@
-<div class="container text-center" style="width: 50%">
+<div class="container text-center" style="width: 60%">
 	<table width="100%" class="resumo alert-success">
 		<tr>
 			<td class="bordered" colspan="3">Resumo</td>
@@ -10,6 +10,9 @@
 			<td class="bordered">Total</td>
 			<td rowspan="2">
 				<div id="grau">Grau</div>
+				<div class="hide_this" id="insuficiente">
+					Por insuficiente entende-se <i>Pontuação insuficiente para concessão de benefício</i>
+				</div>
 			</td>
 		</tr>
 		<tr>

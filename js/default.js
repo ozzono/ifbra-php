@@ -38,12 +38,16 @@ $(document).ready(function(){
 		var grau='';
 		if (resumo<=5739) {
 			grau='Grave'
+			$('#insuficiente').hide();
 		}else if (resumo<=6354) {
 			grau='Moderado'
+			$('#insuficiente').hide();
 		}else if (resumo<=7584) {
 			grau='Leve'
+			$('#insuficiente').hide();
 		}else{
 			grau='Insuficiente<b>*</b>';
+			$('#insuficiente').show();
 		}
 		$('#grau').html(grau);
 	}
