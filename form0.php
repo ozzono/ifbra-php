@@ -1,10 +1,10 @@
-<div class="container text-center" style="width: 60%">
+<div class="container text-center"><!-- style="width: 60%" -->
 	<table width="100%" class="resumo hide_this alert-success">
 		<tr>
 			<td class="bordered" colspan="3">Resumo</td>
 			<td>
 				Classificação
-				<div class="criterios"><a href="pontuacao.php?ref=pontuacao">Verificar critérios</a></div>
+				<div class="criterios"><a href="pontuacao.php?ref=pontuacao">(Verificar critérios)</a></div>
 			</td>
 		</tr>
 		<tr>

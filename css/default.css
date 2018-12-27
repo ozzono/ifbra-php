@@ -29,11 +29,11 @@ table{
 	border-right: 0.1em solid var(--medium-gray);
 }
 td{
-	padding: 0.1em .5em 0.1em .5em /*top right bottom left*/
+	padding: 0em .5em 0.1em .5em /*top right bottom left*/
 }
 .resumo{
 	font-size: 2em;
-	border-radius: 0.5em;
+	border-radius: 0.2em;
 }
 .bottom-02{
 	margin-bottom: 0.2em;
