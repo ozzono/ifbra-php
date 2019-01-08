@@ -70,12 +70,6 @@
 					<input type="text" placeholder="Matrícula" class="form-control">
 				</div>
 			</div>
-			<div class="col-sm-2"> <!-- idade -->
-				<div class="input-group form-group">
-					<span class="input-group-addon">Idade</span>
-					<input type="number" id="idade" disabled class="size_xs form-control">
-				</div>
-			</div>
 			<div class="col-sm-4"> <!-- data de nascimento -->
 				<div class="input-group date form-group-sm" data-provide="datepicker">
 					<span class="input-group-addon">Data de Nascimento</span>
@@ -83,6 +77,12 @@
 					<div class="input-group-addon">
 						<span class="glyphicon hover_pointer glyphicon-th" id="date-icon2"></span>
 					</div>
+				</div>
+			</div>
+			<div class="col-sm-2"> <!-- idade -->
+				<div class="input-group form-group">
+					<span class="input-group-addon">Idade</span>
+					<input type="number" id="idade" disabled class="size_xs form-control">
 				</div>
 			</div>
 		</div>

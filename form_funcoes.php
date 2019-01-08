@@ -28,15 +28,13 @@ function checkbox($i,$j){
 	return $retorno;
 }
 
-function pop_detalhe($i,$j,$detalhe,$valida_detalhe=true){
-	if ($valida_detalhe) {
-		$return=
-			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-plus pop_detalhe float_right" id="rightplus-['.$i.']['.$j.']">'.
-			'</span>'.
-			'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-minus pop_detalhe float_right hide_this" id="rightminus-['.$i.']['.$j.']">'.
-			'</span>'
-		;
-	};
+function pop_detalhe($i,$j){
+	$return=
+		'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-plus pop_detalhe float_right" id="rightplus-['.$i.']['.$j.']">'.
+		'</span>'.
+		'<span class="glyphicon hover_pointer align-self-left form-control glyphicon-minus pop_detalhe float_right hide_this" id="rightminus-['.$i.']['.$j.']">'.
+		'</span>'
+	;
 	echo $return;
 }
 function matriz_detalhe($i,$j,$detalhe,$valida_detalhe=true){

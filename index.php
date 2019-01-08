@@ -1,7 +1,7 @@
 <?php require_once 'cabecalho.php'; ?>
 <?php require_once 'form_funcoes.php'; ?>
 
-<?php $form_filter=$_GET['filter']; ?>
+<?php if (isset($_GET['filter'])) {$form_filter=$_GET['filter']; } ?>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
@@ -28,10 +28,15 @@
 		}
 	}else{
 		require_once 'form0.php';
+		echo '<br>';
 		require_once 'form1.php';
+		echo '<br>';
 		require_once 'form2.php';
+		echo '<br>';
 		require_once 'form3.php';
+		echo '<br>';
 		require_once 'form4.php';
+		echo '<br>';
 	}
 	?>
 </form>
